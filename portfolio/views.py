@@ -25,7 +25,7 @@ def index(request):
         'competences': competences,
 
         # Experiences Objects: attributes: icon / name / description
-        'experiences': experiences,
+        'experiences': experiences,  # TODO colocar no template
     }
 
     return render(request, 'index.html', context)

@@ -1,9 +1,10 @@
 from django.contrib import admin
 
-from portfolio.models import Iam, About, Competence
+from portfolio.models import Iam, About, Competence, Experience
 
 admin.site.register(Iam)
 admin.site.register(About)
+admin.site.register(Experience)
 
 
 @admin.register(Competence)
