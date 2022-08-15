@@ -47,8 +47,22 @@ class Experience(models.Model):
     description = models.TextField(max_length=85, verbose_name="Descrição do cargo")
 
     class Meta:
-        verbose_name = 'Competência'
+        verbose_name = 'Experiência'
         ordering = ('-when',)
 
     def __str__(self):
         return self.name
+
+
+class Award(models.Model):
+    who = models.CharField(max_length=50, verbose_name="Quem premiou/reconheceu")
+    description = models.TextField(max_length=250, verbose_name="Descrição do prêmio")
+    link = models.URLField(verbose_name="Link para prova da premiação/reconhecimento")
+    index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
+
+    class Meta:
+        verbose_name = 'Reconhecimento'
+        ordering = ('index_order',)
+
+    def __str__(self):
+        return self.who + ": " + self.description[:65] + "(...)"

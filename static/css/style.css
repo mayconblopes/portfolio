@@ -817,6 +817,21 @@ a:focus {
     }
 }
 
+/*******************************/
+/******** Awards CSS ********/
+/*******************************/
+.container .banner-text a {
+    color: #ffffff;
+    transition: .3s;
+}
+
+.container .banner-text a:hover,
+.container .banner-text a:active,
+.container .banner-text a:focus{
+    color: #414040;
+    outline: none;
+    text-decoration: none;
+}
 
 /*******************************/
 /******** Portfolio CSS ********/

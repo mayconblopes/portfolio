@@ -1,6 +1,12 @@
+<h1>Meu Portfolio</h1>
+Este projeto foi criado durante a Certificação Google Ux Design. Um dos trabalhos requeridos foi a criação de um portfolio, 
+recomendando-se a utilização de sistemas de criação de páginas como Wix, mas eu preferi colocar a mão na massa e 
+fazer tudo em Python e Django, usando CSS, HMTL e Javascript para o FrontEnd.
+
+A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
+
 <h2>O dilema da gravata</h2>
-[![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://postimg.cc/GHvfZGZc)
-<br>
+[![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://postimg.cc/GHvfZGZc) <br>
 A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
 então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>.
 
@@ -19,3 +25,15 @@ modelo referente às competências profissionais e ao alterar o conteúdo deste 
 é modificada, de forma que se torna possível escolher a posição de cada um desses elementos do site diretamente no 
 Admin. Além disso, alterei o Admin para permitir edição de certos campos diretamente na ListView dos models.
 [![Admin-list-editable.png](https://i.postimg.cc/D01n3bzg/Admin-list-editable.png)](https://postimg.cc/30rPgNm4)
+
+<h2>Alternância de classes no HTML para influenciar o CSS dinamicamente, sem JavaSript</h2>
+Na linha do tempo das minhas experiências profissionais, eu queria que cada bloco ficasse de um lado da linha do 
+tempo, conforme imagem abaixo:
+[![tragetoria-profissional.png](https://i.postimg.cc/h42PT0y4/tragetoria-profissional.png)](https://postimg.cc/SjzhpcbH)
+Consegui fazer isso de forma muito interessante e rápida sem usar JavaScript, alterando dinamicamente a classe dos 
+elementos de acordo com a ordem de listagem. O primeiro elemento a ser exibido vai para o lado esquerdo, o 
+segundo vai para o lado direito, o terceiro novamente para o lado esquerdo e assim sucessivamente. 
+Não queria que a lógica disso estivesse na view, pois não é uma regra de negócio, mas sim uma mera 
+regra para exibição dos itens na tela. Por isso tinha que ficar no template. Sendo assim, utilizei o template tag 
+'cycle' do Django, que é uma solução muito elegante para este caso. Veja a documentação do 'cycle' 
+<a target="_blank" href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle">aqui</a>.

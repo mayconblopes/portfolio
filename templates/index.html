@@ -194,90 +194,43 @@
                 </header>
 
                 <div class="timeline">
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                    {% for experience in experiences %}
+                    <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
+                    <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
                         <div class="timeline-text">
-                            <div class="timeline-date">2022 - Atualmente</div>
-                            <h2>Full Stack Developer</h2>
-                            <h4>Freelancer</h4>
+                            <div class="timeline-date">{{experience.when}}</div>
+                            <h2>{{experience.name}}</h2>
+                            <h4>{{experience.where}}</h4>
                             <p>
-                                Desenvolvimento de WebApps, sites ou sistemas desktops sob demanda.
-                                Vide Portfolio para referências de projetos já concluídos.
+                               {{experience.description}}
                             </p>
                         </div>
                     </div>
-
-<!--                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">-->
-<!--                        <div class="timeline-text">-->
-<!--                            <div class="timeline-date">2045 - 2050</div>-->
-<!--                            <h2>Web Developer</h2>-->
-<!--                            <h4>Soft Agency, San Francisco, CA</h4>-->
-<!--                            <p>-->
-<!--                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">-->
-<!--                        <div class="timeline-text">-->
-<!--                            <div class="timeline-date">2045 - 2050</div>-->
-<!--                            <h2>Web Developer</h2>-->
-<!--                            <h4>Soft Agency, San Francisco, CA</h4>-->
-<!--                            <p>-->
-<!--                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">-->
-<!--                        <div class="timeline-text">-->
-<!--                            <div class="timeline-date">2045 - 2050</div>-->
-<!--                            <h2>Web Developer</h2>-->
-<!--                            <h4>Soft Agency, San Francisco, CA</h4>-->
-<!--                            <p>-->
-<!--                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">-->
-<!--                        <div class="timeline-text">-->
-<!--                            <div class="timeline-date">2045 - 2050</div>-->
-<!--                            <h2>Web Developer</h2>-->
-<!--                            <h4>Soft Agency, San Francisco, CA</h4>-->
-<!--                            <p>-->
-<!--                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">-->
-<!--                        <div class="timeline-text">-->
-<!--                            <div class="timeline-date">2045 - 2050</div>-->
-<!--                            <h2>Web Developer</h2>-->
-<!--                            <h4>Soft Agency, San Francisco, CA</h4>-->
-<!--                            <p>-->
-<!--                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.-->
-<!--                            </p>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <!-- Job Experience End -->
         
-        
-        <!-- Banner Start -->
+        <!--TODO Academic Experience timeline-->
+
+        <!-- Banner Awards Start -->
         <div class="banner wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Reasonable Price</p>
-                    <h2>Get A <span>Special</span> Price</h2>
+                    <p>Premiações</p>
+                    <h2>Prêmios e Reconhecimentos de instituições</h2>
                 </div>
                 <div class="container banner-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                        {% for award in awards %}
+                            <p><a target="_blank" href="{{award.link}}">{{award.who}}: {{award.description}}</a></p>
+                        {% endfor %}
                     </p>
-                    <a class="btn">Pricing Plan</a>
                 </div>
             </div>
         </div>
-        <!-- Banner End -->
+        <!-- Banner Awards End -->
 
 
         <!-- Portfolio Start -->
@@ -374,14 +327,17 @@
         <div class="banner wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Awesome Discount</p>
-                    <h2>Get <span>30%</span> Discount</h2>
+                    <p>Obras produzidas</p>
+                    <h2>Obras <span>Científicas</span> e outros <span>Textos</span> produzidos</h2>
                 </div>
                 <div class="container banner-text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                        Juros Abusivos em contrato de financimento: como identificá-los. (2019).
+                        A lógica por detrás do Direito do Trabalho. (2018);
+                        O direito constitucional processual no Brasil: delimitação da matéria na perspectiva da Constituição Federal de 1988. (2017);
+                        Utilização da metodologia DMAIC como suporte à implementação do processo Gerência de Projetos do MPS.BR no nível G. (2012);
+                        Horus ToolKit: Módulo Mapeamento. (2009);
                     </p>
-                    <a class="btn">Order Now</a>
                 </div>
             </div>
         </div>
