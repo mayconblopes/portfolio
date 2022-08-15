@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from portfolio.models import About, Iam, Competence, Experience, Award
+from portfolio.models import About, Iam, Competence, Experience, Award, Papper
 
 
 def index(request):
@@ -9,6 +9,7 @@ def index(request):
     competences = Competence.objects.all()
     experiences = Experience.objects.all()
     awards = Award.objects.all()
+    pappers = Papper.objects.all()
 
     context = {
 
@@ -17,19 +18,22 @@ def index(request):
         'simple_description': about.simple_description,
         'more_description': about.more_description,
 
-        # I Am Object attributes
+        # Iam Object attributes
         'hello_msg': iam.hello_msg,
         'name': iam.name,
         'featured_skills': iam.featured_skills,
 
-        # Competences Objects: attributes: icon / name / description
+        # Competences Objects
         'competences': competences,
 
-        # Experiences Objects: attributes: name / where / when / description
+        # Experiences Objects
         'experiences': experiences,
 
-        # Awards Objects: attributes: who / description / link
+        # Awards Objects
         'awards': awards,
+
+        # Pappers Objects
+        'pappers': pappers,
     }
 
     return render(request, 'index.html', context)

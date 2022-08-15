@@ -3,347 +3,317 @@
 {% load static %}
 
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ name }}</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<!--        <meta content="Free Website Template" name="keywords">-->
-<!--        <meta content="Free Website Template" name="description">-->
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+<!-- Nav Bar Start -->
+<div class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">QuemSou?</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- TODO Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">Sobre</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#experience" class="nav-item nav-link">Experience</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <!--                        <a href="#price" class="nav-item nav-link">Price</a>-->
+                <!--                        <a href="#review" class="nav-item nav-link">Review</a>-->
+                <!--                        <a href="#team" class="nav-item nav-link">Team</a>-->
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Nav Bar End -->
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">-->
-        <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
-        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
-
-        <!-- Font Awesome Free package's files here -->
-<!--    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>-->
-        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
-
-    </head>
-
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">QuemSou?</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">Sobre</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
-                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-<!--                        <a href="#price" class="nav-item nav-link">Price</a>-->
-<!--                        <a href="#review" class="nav-item nav-link">Review</a>-->
-<!--                        <a href="#team" class="nav-item nav-link">Team</a>-->
-                        <a href="#blog" class="nav-item nav-link">Blog</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+<!-- Hero Start -->
+<div class="hero" id="home">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p>{{ hello_msg }}</p>
+                        <h1>{{ name }}</h1>
+                        <h2></h2>
+                        <div class="typed-text">{{ featured_skills }}</div>
+                    </div>
+                    <div class="hero-btn">
+                        <a class="btn" target="_blank" href="https://www.linkedin.com/in/mayconblopes/">LinkedIn</a>
+                        <a class="btn" target="_blank" href="https://www.instagram.com/advmayconlopes/">Instagram</a>
+                        <a class="btn" target="_blank" href="https://github.com/mayconblopes">GitHub</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Nav Bar End -->
-
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p>{{ hello_msg }}</p>
-                                <h1>{{ name }}</h1>
-                                <h2></h2>
-                                <div class="typed-text">{{ featured_skills }}</div>
-                            </div>
-                            <div class="hero-btn">
-                                <a class="btn" target="_blank" href="https://www.linkedin.com/in/mayconblopes/">LinkedIn</a>
-                                <a class="btn" target="_blank" href="https://www.instagram.com/advmayconlopes/">Instagram</a>
-                                <a class="btn" target="_blank" href="https://github.com/mayconblopes">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="{% static 'img/hero.png' %}" alt="Hero Image">
-                        </div>
-                    </div>
+            <div class="col-sm-12 col-md-6 d-none d-md-block">
+                <div class="hero-image">
+                    <img src="{% static 'img/hero.png' %}" alt="Hero Image">
                 </div>
             </div>
         </div>
-        <!-- Hero End -->
+    </div>
+</div>
+<!-- Hero End -->
 
 
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="{% static 'img/about.png' %}" alt="About Image">
-                        </div>
+<!-- About Start -->
+<div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="{% static 'img/about.png' %}" alt="About Image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                {% autoescape off %}
+                <div id="about-me" class="about-content">
+                    <div class="section-header text-left">
+                        <p>Um pouco mais sobre mim</p>
+                        <h2>{{ about_title }}</h2>
                     </div>
-                    <div class="col-lg-6">
-                        {% autoescape off %}
-                        <div id="about-me" class="about-content">
-                            <div class="section-header text-left">
-                                <p>Um pouco mais sobre mim</p>
-                                <h2>{{ about_title }}</h2>
-                            </div>
-                            <div class="about-text">
+                    <div class="about-text">
 
-                                <div class="simple-about-text">
-                                    {{ simple_description }}
-                                </div>
-
-                                <div class="more-about-text hidden">
-                                    {{ more_description }}
-                                </div>
-
-                                <button class="btn change-btn">Saiba mais</button>
-                            </div>
-<!--                            <div class="skills">-->
-<!--                                <div class="skill-name">-->
-<!--                                    <p>Web Design</p><p>55%</p>-->
-<!--                                </div>-->
-<!--                                <div class="progress">-->
-<!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                                </div>-->
-<!--                                <div class="skill-name">-->
-<!--                                    <p>Web Development</p><p>95%</p>-->
-<!--                                </div>-->
-<!--                                <div class="progress">-->
-<!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                                </div>-->
-<!--                                <div class="skill-name">-->
-<!--                                    <p>Apps Design</p><p>90%</p>-->
-<!--                                </div>-->
-<!--                                <div class="progress">-->
-<!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                                </div>-->
-<!--                                <div class="skill-name">-->
-<!--                                    <p>Apps Development</p><p>85%</p>-->
-<!--                                </div>-->
-<!--                                <div class="progress">-->
-<!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-                        {% endautoescape %}
+                        <div class="simple-about-text">
+                            {{ simple_description }}
                         </div>
+
+                        <div class="more-about-text hidden">
+                            {{ more_description }}
+                        </div>
+
+                        <button class="btn change-btn">Saiba mais</button>
                     </div>
+                    <!--                            <div class="skills">-->
+                    <!--                                <div class="skill-name">-->
+                    <!--                                    <p>Web Design</p><p>55%</p>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="progress">-->
+                    <!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="skill-name">-->
+                    <!--                                    <p>Web Development</p><p>95%</p>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="progress">-->
+                    <!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="skill-name">-->
+                    <!--                                    <p>Apps Design</p><p>90%</p>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="progress">-->
+                    <!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="skill-name">-->
+                    <!--                                    <p>Apps Development</p><p>85%</p>-->
+                    <!--                                </div>-->
+                    <!--                                <div class="progress">-->
+                    <!--                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    {% endautoescape %}
                 </div>
             </div>
         </div>
-        <!-- About End -->
-        
-        
-        <!-- Service Start -->
-        <div class="service" id="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Em que atuo</p>
-                    <h2>Competências Profissionais</h2>
-                </div>
+    </div>
+</div>
+<!-- About End -->
 
-                <div class="row">
-                    <!-- List of competences -->
-                    {% for competence in competences %}
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="{{competence.icon}}"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>{{competence.name}}</h3>
-                                <p>
-                                    {{competence.description}}
-                                </p>
-                            </div>
-                        </div>
+
+<!-- Service Start -->
+<div class="service" id="service">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Em que atuo</p>
+            <h2>Competências Profissionais</h2>
+        </div>
+
+        <div class="row">
+            <!-- List of competences -->
+            {% for competence in competences %}
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="{{competence.icon}}"></i>
                     </div>
-                    {% endfor %}
+                    <div class="service-text">
+                        <h3>{{competence.name}}</h3>
+                        <p>
+                            {{competence.description}}
+                        </p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        <!-- Service End -->
-        
-        
-         <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Experiência</p>
-                    <h2>Trajetória Profissional</h2>
-                </header>
+    </div>
+</div>
+<!-- Service End -->
 
-                <div class="timeline">
-                    {% for experience in experiences %}
-                    <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
-                    <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">{{experience.when}}</div>
-                            <h2>{{experience.name}}</h2>
-                            <h4>{{experience.where}}</h4>
-                            <p>
-                               {{experience.description}}
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
-        
-        <!--TODO Academic Experience timeline-->
 
-        <!-- Banner Awards Start -->
-        <div class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Premiações</p>
-                    <h2>Prêmios e Reconhecimentos de instituições</h2>
-                </div>
-                <div class="container banner-text">
+<!-- Experience Start -->
+<div class="experience" id="experience">
+    <div class="container">
+        <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>Experiência</p>
+            <h2>Trajetória Profissional e Acadêmica</h2>
+        </header>
+
+        <div class="timeline">
+            {% for experience in experiences %}
+            <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
+            <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
+                <div class="timeline-text">
+                    <div class="timeline-date">{{experience.when}}</div>
+                    <h2>{{experience.name}}</h2>
+                    <h4>{{experience.where}}</h4>
                     <p>
-                        {% for award in awards %}
-                            <p><a target="_blank" href="{{award.link}}">{{award.who}}: {{award.description}}</a></p>
-                        {% endfor %}
+                        {{experience.description}}
                     </p>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        <!-- Banner Awards End -->
+    </div>
+</div>
+<!-- Job Experience End -->
+
+<!-- Banner Awards Start -->
+<div class="banner wow zoomIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Premiações</p>
+            <h2><span>Prêmios</span> e Reconhecimentos de <span>Instituições</span></h2>
+        </div>
+        <div class="container banner-text">
+            <p>
+                {% for award in awards %}
+                    <p id="link-award">{{award.who}}: <a target="_blank" href="{{award.link}}">{{award.description}}</a></p>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Banner Awards End -->
 
 
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>My Portfolio</p>
-                    <h2>My Excellent Portfolio</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-1">Web Design</li>
-                            <li data-filter=".filter-2">Mobile Apps</li>
-                            <li data-filter=".filter-3">Game Dev</li>
-                        </ul>
+
+<!-- Banner Pappers Start -->
+<div class="banner wow zoomIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Obras produzidas</p>
+            <h2>Obras <span>Científicas</span> e outros <span>Textos</span> produzidos</h2>
+        </div>
+        <div class="container banner-text">
+            <p>
+                {% for papper in pappers %}
+                    <p id="title-papper">{{papper.title}}</p>
+                    <p id="links-papper"><a target="_blank" href="#"> Click aqui para ler o resumo.</a> <a target="_blank" href="{{papper.link}}">Click aqui para ler a obra.</a></p>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Banner Pappers End -->
+
+<!-- Portfolio Start -->
+<div class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>My Portfolio</p>
+            <h2>My Excellent Portfolio</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-filter">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-1">Web Design</li>
+                    <li data-filter=".filter-2">Mobile Apps</li>
+                    <li data-filter=".filter-3">Game Dev</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-1.jpg' %}" alt="Image">
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>eCommerce Website</h3>
+                        <a class="btn" href="{% static 'img/portfolio-1.jpg' %}" data-lightbox="portfolio">+</a>
                     </div>
                 </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-1.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>eCommerce Website</h3>
-                                <a class="btn" href="{% static 'img/portfolio-1.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-2.jpg' %}" alt="Image">
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-2.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Product Landing Page</h3>
-                                <a class="btn" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+                    <div class="portfolio-text">
+                        <h3>Product Landing Page</h3>
+                        <a class="btn" href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio">+</a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-3.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript quiz game</h3>
-                                <a class="btn" href="{% static 'img/portfolio-3.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-3.jpg' %}" alt="Image">
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-4.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>JavaScript drawing</h3>
-                                <a class="btn" href="{% static 'img/portfolio-4.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+                    <div class="portfolio-text">
+                        <h3>JavaScript quiz game</h3>
+                        <a class="btn" href="{% static 'img/portfolio-3.jpg' %}" data-lightbox="portfolio">+</a>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-5.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Social Mobile Apps</h3>
-                                <a class="btn" href="{% static 'img/portfolio-5.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-4.jpg' %}" alt="Image">
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="{% static 'img/portfolio-6.jpg' %}" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Company Website</h3>
-                                <a class="btn" href="{% static 'img/portfolio-6.jpg' %}" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
+                    <div class="portfolio-text">
+                        <h3>JavaScript drawing</h3>
+                        <a class="btn" href="{% static 'img/portfolio-4.jpg' %}" data-lightbox="portfolio">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-5.jpg' %}" alt="Image">
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Social Mobile Apps</h3>
+                        <a class="btn" href="{% static 'img/portfolio-5.jpg' %}" data-lightbox="portfolio">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+                <div class="portfolio-wrap">
+                    <div class="portfolio-img">
+                        <img src="{% static 'img/portfolio-6.jpg' %}" alt="Image">
+                    </div>
+                    <div class="portfolio-text">
+                        <h3>Company Website</h3>
+                        <a class="btn" href="{% static 'img/portfolio-6.jpg' %}" data-lightbox="portfolio">+</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Portfolio End -->
-        
-        
-        <!-- Banner Start -->
-        <div class="banner wow zoomIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Obras produzidas</p>
-                    <h2>Obras <span>Científicas</span> e outros <span>Textos</span> produzidos</h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        Juros Abusivos em contrato de financimento: como identificá-los. (2019).
-                        A lógica por detrás do Direito do Trabalho. (2018);
-                        O direito constitucional processual no Brasil: delimitação da matéria na perspectiva da Constituição Federal de 1988. (2017);
-                        Utilização da metodologia DMAIC como suporte à implementação do processo Gerência de Projetos do MPS.BR no nível G. (2012);
-                        Horus ToolKit: Módulo Mapeamento. (2009);
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Banner End -->
-        
-        
+    </div>
+</div>
+<!-- Portfolio End -->
+
+
+
+
+
 <!--        &lt;!&ndash; Price Start &ndash;&gt;-->
 <!--        <div class="price" id="price">-->
 <!--            <div class="container">-->
@@ -441,7 +411,7 @@
 <!--        </div>-->
 <!--        &lt;!&ndash; Price End &ndash;&gt;-->
 <!--        -->
-        
+
 <!--        &lt;!&ndash; Testimonial Start &ndash;&gt;-->
 <!--        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">-->
 <!--            <div class="container">-->
@@ -583,156 +553,186 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--        &lt;!&ndash; Team End &ndash;&gt;-->
-        
-        
-        <!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
+
+
+<!-- Contact Start -->
+<div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                <p class="help-block"></p>
                             </div>
-                        </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block"></p>
+                            </div>
+                            <div>
+                                <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    </div>
+</div>
+<!-- Contact End -->
 
 
-        <!-- Blog Start -->
-        <div class="blog" id="blog">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Articles</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-1.jpg' %}" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Web Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>5</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
+<!-- Blog Start -->
+<div class="blog" id="blog">
+    <div class="container">
+        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+            <p>From Blog</p>
+            <h2>Latest Articles</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-img">
+                        <img src="{% static 'img/blog-1.jpg' %}" alt="Blog">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-2.jpg' %}" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
+                    <div class="blog-text">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <div class="blog-meta">
+                            <p><i class="far fa-user"></i>Admin</p>
+                            <p><i class="far fa-list-alt"></i>Web Design</p>
+                            <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                            <p><i class="far fa-comments"></i>5</p>
                         </div>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                        </p>
+                        <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-img">
+                        <img src="{% static 'img/blog-2.jpg' %}" alt="Blog">
+                    </div>
+                    <div class="blog-text">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <div class="blog-meta">
+                            <p><i class="far fa-user"></i>Admin</p>
+                            <p><i class="far fa-list-alt"></i>Apps Design</p>
+                            <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                            <p><i class="far fa-comments"></i>10</p>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                        </p>
+                        <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Blog End -->
+    </div>
+</div>
+<!-- Blog End -->
 
 
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>123 Street, New York, USA</h3>
-                        <div class="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>info@example.com</p>
-                        </div>
-                        <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+<!-- Footer Start -->
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="footer-info">
+                <h2>Kate Winslet</h2>
+                <h3>123 Street, New York, USA</h3>
+                <div class="footer-menu">
+                    <p>+012 345 67890</p>
+                    <p>info@example.com</p>
                 </div>
-                <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                <div class="footer-social">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
+        <div class="container copyright">
+            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
         </div>
+    </div>
+</div>
+<!-- Footer End -->
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-        <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-        <script src="{% static 'lib/typed/typed.min.js' %}"></script>
-        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
-        <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
-        <script src="{% static 'mail/contact.js' %}"></script>
 
-        <!-- Template Javascript -->
-        <script src="{% static 'js/main.js' %}"></script>
-        <script src="{% static 'js/detail_about.js' %}"></script>
-    </body>
+<!-- Back to top button -->
+<a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+<!-- Pre Loader -->
+<div id="loader" class="show">
+    <div class="loader"></div>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/typed/typed.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/detail_about.js' %}"></script>
+</body>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{{ name }}</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!--        <meta content="Free Website Template" name="keywords">-->
+<!--        <meta content="Free Website Template" name="description">-->
+
+        <!-- TODO Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">-->
+        <link href="{% static 'lib/animate/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        <!-- Font Awesome Free package's files here -->
+<!--    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>-->
+        <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    </head>
 </html>

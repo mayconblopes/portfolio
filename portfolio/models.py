@@ -41,17 +41,32 @@ class Competence(models.Model):
 
 
 class Experience(models.Model):
-    name = models.CharField(max_length=50, verbose_name="Nome do cargo")
-    where = models.CharField(max_length=250, verbose_name="Local trabalho")
+    name = models.CharField(max_length=50, verbose_name="Nome do Cargo ou do Título Acadêmico")
+    where = models.CharField(max_length=250, verbose_name="Local")
     when = models.CharField(max_length=50, verbose_name="Quando [Ano-Inicio - Ano-Fim]")
-    description = models.TextField(max_length=85, verbose_name="Descrição do cargo")
+    description = models.TextField(max_length=85, verbose_name="Descrição do Cargo ou do Título Acadêmico")
+    index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
 
     class Meta:
         verbose_name = 'Experiência'
-        ordering = ('-when',)
+        ordering = ('index_order',)
 
     def __str__(self):
         return self.name
+
+
+class Papper(models.Model):
+    title = models.CharField(max_length=250, verbose_name="Título da obra/texto")
+    abstract = models.TextField(max_length=250, verbose_name="Resumo")
+    link = models.URLField(verbose_name="Link da obra /texto")
+    index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
+
+    class Meta:
+        verbose_name = 'Papper'
+        ordering = ('index_order',)
+
+    def __str__(self):
+        return self.title
 
 
 class Award(models.Model):
