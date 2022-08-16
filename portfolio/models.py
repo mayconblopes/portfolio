@@ -81,3 +81,14 @@ class Award(models.Model):
 
     def __str__(self):
         return self.who + ": " + self.description[:65] + "(...)"
+
+
+class PortfolioItem(models.Model):
+    image_url = models.URLField(verbose_name="Link da imagem do produto")
+    name = models.CharField(max_length=18, verbose_name="Nome do produto")
+    product_owner = models.CharField(max_length=200, verbose_name="Demandante")
+    description = models.TextField(max_length=300, verbose_name="Descrição do produto desenvolvido")
+    github_link = models.URLField(verbose_name="Link do github", null=True, blank=True)
+    website_link = models.URLField(verbose_name="Link do website", null=True, blank=True)
+    index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
+
