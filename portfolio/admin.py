@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from portfolio.models import Iam, About, Competence, Experience, Award, Papper
+from portfolio.models import Iam, About, Competence, Experience, Award, Papper, PortfolioItem
 
 admin.site.register(Iam)
 admin.site.register(About)
@@ -27,4 +27,10 @@ class AwardAdmin(admin.ModelAdmin):
 @admin.register(Award)
 class AwardAdmin(admin.ModelAdmin):
     list_display = ('who', 'description', 'index_order')
+    list_editable = ('index_order',)
+
+
+@admin.register(PortfolioItem)
+class PortfolioItemAdmin(admin.ModelAdmin):
+    list_display = ('name', 'product_owner', 'index_order')
     list_editable = ('index_order',)

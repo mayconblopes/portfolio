@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from portfolio.models import About, Iam, Competence, Experience, Award, Papper
+from portfolio.models import About, Iam, Competence, Experience, Award, Papper, PortfolioItem
 
 
 def index(request):
@@ -10,6 +10,7 @@ def index(request):
     experiences = Experience.objects.all()
     awards = Award.objects.all()
     pappers = Papper.objects.all()
+    portfolio_items = PortfolioItem.objects.all()
 
     context = {
 
@@ -34,6 +35,9 @@ def index(request):
 
         # Pappers Objects
         'pappers': pappers,
+
+        # PortfolioItems Objects
+        'portfolio_items': portfolio_items,
     }
 
     return render(request, 'index.html', context)
