@@ -4,7 +4,7 @@
 body {
     color: #797979;
     background: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Exo', sans-serif;
 
 }
 
@@ -25,7 +25,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #EF233C;
+    color: #ff5f0c;
     outline: none;
     text-decoration: none;
 }
@@ -44,21 +44,21 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #ffffff;
-    background: #EF233C;
+    color: #000000;
+    background: #fabe18;
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    box-shadow: inset 0 0 0 50px #fabe18;
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
 }
 
 .btn:hover {
-    color: #EF233C;
+    color: #ff5f0c;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 #ff5f0c;
+    border-color: #ff5f0c;
 }
 
 #loader {
@@ -92,7 +92,7 @@ a:focus {
     width: 45px;
     height: 45px;
     border: 5px solid #dddddd;
-    border-top: 5px solid #EF233C;
+    border-top: 5px solid #ff5f0c;
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
@@ -123,7 +123,7 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #ffffff;
+    color: #000000;
 }
 
 .back-to-top:hover i {
@@ -181,51 +181,60 @@ a:focus {
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #ffffff !important;
+        background: #000000 !important;
     }
     
     .navbar .navbar-brand {
-        color: #ffffff;
+        color: #000000;
     }
     
     .navbar.nav-sticky .navbar-brand {
-        color: #EF233C;
+        color: #fabe18;
     }
 
     .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link:focus {
         padding: 10px 10px 8px 10px;
-        color: #ffffff;
+        color: #000000;
         font-size: 15px;
         font-weight: 500;
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-        color: #414141;
+        color: #4a4a4a;
     }
 
-    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color:#ff5f0c
+    }
+
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover {
+        color: #fabe18
+    }
+
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: #ff5f0c;
     }
     
-    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
-        color: #EF233C;
+        color: #ff5f0c;
     }
 }
 
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
-        background: #ffffff !important;
+        background: #000000 !important;
     }
     
     .navbar .navbar-brand {
-        color: #EF233C;
+        color: #ff5f0c;
     }
-    
+
+    .navbar .navbar-brand:hover {
+        color: #fabe18;
+    }
     .navbar .navbar-nav {
         margin-top: 15px;
     }
@@ -233,9 +242,26 @@ a:focus {
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+        color: #4a4a4a;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #fabe18;
+    }
+
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #ff5f0c
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(../img/ham-menu.png);
+        
     }
 }
 
@@ -249,8 +275,9 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(rgb(122 22 22 / 95%), rgb(122 21 34 / 95%)), url(../img/hero-bg.jpg);
-    background-position: center;
+    /* background: linear-gradient(rgb(122 22 22 / 95%), rgb(122 21 34 / 95%)), url(../img/hero-bg.jpg); */
+    background: linear-gradient(rgb(250 190 24 / 98%), rgb(250 190 34 / 98%)), url(../img/about-bg.jpg);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -280,14 +307,17 @@ a:focus {
 }
 
 .hero .hero-text p {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000; 
+
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 .hero .hero-text h1 {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 3px;
@@ -298,7 +328,8 @@ a:focus {
     display: inline-block;
     margin: 0;
     height: 35px;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     font-size: 35px;
     font-weight: 600;
 }
@@ -310,21 +341,24 @@ a:focus {
 .hero .hero-text .typed-cursor {
     font-size: 35px;
     font-weight: 300;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #ff5f0c;
 }
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
+    color: #000000;
+    background: transparent;
+    box-shadow: inset 0 0 0 50px #c29012;
 }
 
 .hero .hero-btn .btn:hover {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+    box-shadow: inset 0 0 0 0 #c29012;
+    /* border-color: #ffffff; */
+    border-color: #000000;
 }
 
 .hero .hero-btn .btn:first-child {
@@ -442,7 +476,7 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: #EF233C;
+    background: #ff5f0c;
     z-index: -1;
 }
 
@@ -453,7 +487,7 @@ a:focus {
     height: 3px;
     top: 11px;
     left: 3px;
-    background: #EF233C;
+    background: #ff5f0c;
     z-index: 1;
 }
 
@@ -498,8 +532,8 @@ a:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: linear-gradient(rgb(122 22 22 / 95%), rgb(122 21 34 / 95%)), url(../img/about-bg.jpg);
-    background-position: center;
+    background: linear-gradient(rgb(250 190 24 / 95%), rgb(250 190 34 / 95%)), url(../img/about-bg.jpg);
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -529,19 +563,6 @@ a:focus {
 
 .about .skill-name p:last-child {
     float: right;
-}
-
-.about .progress {
-    height: 10px;
-    border-radius: 10px;
-    background: #dddddd;
-}
-
-.about .progress .progress-bar {
-    width: 0px;
-    background: #EF233C;
-    border-radius: 10px;
-    transition: 2s;
 }
 
 
@@ -577,7 +598,7 @@ a:focus {
     content: '';
     position: absolute;
     width: 2px;
-    background: #EF233C;
+    background: #ff5f0c;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -609,7 +630,7 @@ a:focus {
     top: 48px;
     right: -8px;
     background: #ffffff;
-    border: 2px solid #EF233C;
+    border: 2px solid #ff5f0c;
     border-radius: 16px;
     z-index: 1;
 }
@@ -641,7 +662,7 @@ a:focus {
     top: 44px;
     font-size: 16px;
     font-weight: 600;
-    color: #EF233C;
+    color: #ff5f0c;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 1;
@@ -659,7 +680,7 @@ a:focus {
 
 .experience .timeline .timeline-text {
     padding: 30px;
-    background: #ffffff;
+    background: #fabe18;
     position: relative;
     border-right: 5px solid #dddddd;
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
@@ -674,6 +695,7 @@ a:focus {
     margin: 0 0 5px 0;
     font-size: 22px;
     font-weight: 600;
+    color:#000000;
 }
 
 .experience .timeline .timeline-text h4 {
@@ -681,11 +703,13 @@ a:focus {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+    color: #414141;
 }
 
 .experience .timeline .timeline-text p {
     margin: 0;
     font-size: 16px;
+    color:#000000;
 }
 
 @media (max-width: 767.98px) {
@@ -757,7 +781,7 @@ a:focus {
 }
 
 .service .service-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
+    box-shadow: inset 800px 0 0 0 #fabe18;
 }
 
 .service .service-icon {
@@ -767,14 +791,14 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EF233C;
+    border: 1px solid #ff5f0c;
     background: #ffffff;
 }
 
 .service .service-icon i {
     position: relative;
     font-size: 60px;
-    color: #EF233C;
+    color: #ff5f0c;
     transition: .3s;
 }
 
@@ -803,7 +827,7 @@ a:focus {
 
 .service .service-item:hover .service-text h3,
 .service .service-item:hover .service-text p {
-    color: #ffffff;
+    color: #000000;
 }
 
 @media (max-width: 575.98px) {
@@ -821,7 +845,7 @@ a:focus {
 /******** Awards CSS ********/
 /*******************************/
 .container .banner-text a {
-    color: #ffffff;
+    color: #000000;
     transition: .3s;
 }
 
@@ -841,15 +865,15 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-.portfolio #portfolio-filter {
+/* .portfolio #portfolio-filter {
     padding: 0;
     margin: -15px 0 25px 0;
     list-style: none;
     font-size: 0;
     text-align: center;
-}
+} */
 
-.portfolio #portfolio-filter li {
+/* .portfolio #portfolio-filter li {
     cursor: pointer;
     display: inline-block;
     margin: 5px;
@@ -857,10 +881,10 @@ a:focus {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
-    background: #EF233C;
+    background: #ff5f0c;
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    box-shadow: inset 0 0 0 50px #ff5f0c;
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
@@ -868,11 +892,11 @@ a:focus {
 
 .portfolio #portfolio-filter li:hover,
 .portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
+    color: #ff5f0c;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
+    box-shadow: inset 0 0 0 0 #ff5f0c;
+    border-color: #ff5f0c;
+} */
 
 .portfolio .portfolio-item {
     position: relative;
@@ -914,7 +938,7 @@ a:focus {
 
 .portfolio .portfolio-text h3 {
     width: calc(100% - 70px);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin: 0 0 0 15px;
     white-space: nowrap;
@@ -933,10 +957,10 @@ a:focus {
 }
 
 .portfolio .portfolio-item:hover a.btn {
-    color: #EF233C;
+    color: #ff5f0c;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 #ff5f0c;
+    border-color: #ff5f0c;
 }
 
 
@@ -950,7 +974,7 @@ a:focus {
     margin: 45px 0;
  */
     padding: 90px 0;
-    background: #EF233C;
+    background: #fabe18;
 }
 
 .banner .container {
@@ -972,22 +996,22 @@ a:focus {
 }
 
 .banner .section-header h2 {
-    color: #ffffff;
+    color: #000000;
 }
 
 .banner .section-header h2 span {
-    color: #414141;
+    color: #ff5f0c;
     font-size: 50px;
 }
 
 .banner .banner-text p {
     font-size: 18px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .banner .banner-text .btn {
     margin-top: 15px;
-    color: #EF233C;
+    color: #ff5f0c;
     background: #ffffff;
     box-shadow: inset 0 0 0 50px #ffffff;
 }
@@ -999,9 +1023,9 @@ a:focus {
     border-color: #ffffff;
 }
 
-/**************************************************/
+/***************************************************/
 /***** Specific Banner Pappers and Awards CSS ******/
-/**************************************************/
+/***************************************************/
 
 #link-award a {
     text-decoration: underline;
@@ -1056,7 +1080,7 @@ a:focus {
 }
 
 .price .price-item.featured-item .price-header {
-    color: #EF233C;
+    color: #ff5f0c;
 }
 
 .price .price-title h2 {
@@ -1086,7 +1110,7 @@ a:focus {
 }
 
 .price .price-item.featured-item h2 {
-    color: #EF233C;
+    color: #ff5f0c;
 }
 
 .price .price-body {
@@ -1122,226 +1146,15 @@ a:focus {
 
 .price .price-item.featured-item .price-action .btn {
     color: #ffffff;
-    background: #EF233C;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    background: #ff5f0c;
+    box-shadow: inset 0 0 0 50px #ff5f0c;
 }
 
 .price .price-item.featured-item .price-action .btn:hover {
-    color: #EF233C;
+    color: #ff5f0c;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
-
-
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
-.team {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.team .team-item {
-    position: relative;
-    background: #ffffff;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
-}
-
-.team .team-img {
-    position: relative;
-    width: 50%;
-    overflow: hidden;
-}
-
-.team .team-img img {
-    position: relative;
-    width: 100%;
-    transition: .5s;
-}
-
-.team .team-text {
-    position: relative;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.team .team-text h2 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    transition: 1s;
-}
-
-.team .team-text h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: 1s;
-}
-
-.team .team-text p {
-    margin-bottom: 20px;
-    transition: 1s;
-}
-
-.team .team-social {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.team .team-social a.btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-
-.team .team-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
-}
-
-.team .team-item:hover .team-img img {
-    transform: scale(1.2);
-}
-
-.team .team-item:hover .team-text h2,
-.team .team-item:hover .team-text h4,
-.team .team-item:hover .team-text p {
-    color: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn {
-    background: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn:hover {
-    border-color: #ffffff;
-}
-
-@media(max-width: 575.98px) {
-    .team .team-text {
-        padding: 0 15px;
-    }
-    
-    .team .team-text h2 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .team .team-text h4 {
-        margin-bottom: 5px;
-    }
-
-    .team .team-text p {
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-}
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.testimonial .container {
-    max-width: 900px;
-}
-
-.testimonial .testimonial-icon {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.testimonial .testimonial-icon i {
-    font-size: 60px;
-    color: rgba(256, 256, 256, .5);
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.testimonial .testimonial-img {
-    position: relative;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.testimonial .testimonial-item img {
-    margin: 0 auto;
-    width: 120px;
-    padding: 10px;
-    border: 5px dotted #ffffff;
-    border-radius: 100px;
-}
-
-.testimonial .testimonial-text {
-    position: relative;
-    margin-top: -70px;
-    padding: 65px 35px 30px 35px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 500px;
-}
-
-.testimonial .testimonial-item p {
-    font-size: 18px;
-    font-style: italic;
-}
-
-.testimonial .testimonial-text h3 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.testimonial .testimonial-text h4 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
-}
-
-.testimonial .owl-dot.active {
-    background: #ffffff;
+    box-shadow: inset 0 0 0 0 #ff5f0c;
+    border-color: #ff5f0c;
 }
 
 
@@ -1352,7 +1165,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: #EF233C;
+    background: #ff5f0c;
 }
 
 .contact .container-fluid {
@@ -1363,7 +1176,7 @@ a:focus {
 .contact .contact-form {
     position: relative;
     padding: 90px 0 90px 45px;
-    background: #EF233C;
+    background: #ff5f0c;
 }
 
 .contact .contact-form input {
@@ -1397,7 +1210,7 @@ a:focus {
 
 .contact .contact-form .btn {
     margin-top: 35px;
-    color: #EF233C;
+    color: #ff5f0c;
     background: #ffffff;
     box-shadow: inset 0 0 0 50px #ffffff;
 }
@@ -1511,7 +1324,7 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #EF233C;
+    background: #ff5f0c;
 }
 
 .footer .container-fluid {
