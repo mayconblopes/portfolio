@@ -1,14 +1,18 @@
 <h1>Meu Portfolio</h1>
-Este projeto foi criado durante a Certificação Google Ux Design. Um dos trabalhos requeridos foi a criação de um portfolio, 
+Este projeto foi criado durante a minha <strong>Certificação Google Ux Design</strong>. Um dos trabalhos requeridos 
+foi a criação 
+de um 
+portfolio, 
 recomendando-se a utilização de sistemas de criação de páginas como Wix, mas eu preferi colocar a mão na massa e 
 fazer tudo em Python e Django, usando CSS, HMTL e Javascript para o FrontEnd.
 
 A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
 
 <h2>O dilema da gravata</h2>
-[![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://postimg.cc/GHvfZGZc) <br>
+[![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://youtu.be/z_tYQXtl5e4) <br>
 A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
-então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>.
+então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>, que 
+inclusive foi utilizado ao longo de todo o projeto para edição de imagens e ícones.
 
 <h2>Centralizando o conteúdo About</h2>
 No conteúdo About ("Um pouco mais sobre mim"), após clicar no botão "Saiba mais" um conteúdo mais detalhado é apresentado,
@@ -18,8 +22,9 @@ About para começar a ler novamente o novo texto.
 <h2>Models do Django para evitar alteração no código fonte</h2>
 Criei diversos modelos (Model.models) para que a edição do conteúdo do site pudesse ser modificada sem necessidade de 
 alterar o código fonte da página, mas tão somente os próprios modelos. Por exemplo: para criar uma nova competência 
-profissional ou uma nova experiência de trabalho, basta criar um novo objeto correspondente na página de Administração e este objeto 
-automaticamente será exibido no site. Também otimizei algumas funções do Admin do Django para facilitar a 
+profissional ou uma nova experiência de trabalho, basta criar um novo objeto correspondente na página de 
+Administração que cuidará de salvar o objeto no banco de dados e o site buscará os objetos no banco para serem 
+automaticamente exibidos no site. Também otimizei algumas funções do Admin do Django para facilitar a 
 personalização do conteúdo do site e como este é exibido. Por exemplo, criei um atributo "index_order" no 
 modelo referente às competências profissionais e ao alterar o conteúdo deste atributo, a posição do objeto na página 
 é modificada, de forma que se torna possível escolher a posição de cada um desses elementos do site diretamente no 
@@ -37,3 +42,17 @@ Não queria que a lógica disso estivesse na view, pois não é uma regra de neg
 regra para exibição dos itens na tela. Por isso tinha que ficar no template. Sendo assim, utilizei o template tag 
 'cycle' do Django, que é uma solução muito elegante para este caso. Veja a documentação do 'cycle' 
 <a target="_blank" href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle">aqui</a>.
+Utilizei o mesmo princípio de alteração dinâmica de HTML por meio de template tags do Django em outros 
+trechos do código, como por exemplo para criar IDs dinâmicas para as janelas modais na seção de portfolio.
+
+<h2>Sobre as janelas modais</h2>
+As janelas modais são aquelas que exibem conteúdos novos dentro da página atual, ou seja, sem abrir uma nova página. 
+Eu usei bastante deste recurso no Portfolio:
+<br>
+[![Janelas-modais-Adobe-Express.gif](https://i.postimg.cc/SsDbZr2M/Janelas-modais-Adobe-Express.gif)](https://www.youtube.com/watch?v=Mhuz1PnIfqU)
+<br>
+Para saber mais sobre como criar janelas modais de forma muito prática, recomendo os seguintes links:
+<ol>
+    <li><a src="https://getbootstrap.com/docs/4.0/components/modal/">Getbootstrap</a></li>
+    <li><a src="https://lokeshdhakar.com/projects/lightbox2/#getting-started">Lightbox</a></li>
+</ol>
