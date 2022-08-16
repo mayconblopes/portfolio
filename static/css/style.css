@@ -229,7 +229,7 @@ a:focus {
     }
     
     .navbar .navbar-brand {
-        color: #ff5f0c;
+        color: #fabe18;
     }
 
     .navbar .navbar-brand:hover {
@@ -761,15 +761,15 @@ a:focus {
 
 
 /*******************************/
-/********* Service CSS *********/
+/********* competence CSS *********/
 /*******************************/
-.service {
+.competence {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
 }
 
-.service .service-item {
+.competence .competence-item {
     position: relative;
     margin-bottom: 30px;
     display: flex;
@@ -780,11 +780,11 @@ a:focus {
  */
 }
 
-.service .service-item:hover {
+.competence .competence-item:hover {
     box-shadow: inset 800px 0 0 0 #fabe18;
 }
 
-.service .service-icon {
+.competence .competence-icon {
     position: relative;
     width: 150px;
     min-height: 150px;
@@ -795,48 +795,48 @@ a:focus {
     background: #ffffff;
 }
 
-.service .service-icon i {
+.competence .competence-icon i {
     position: relative;
     font-size: 60px;
     color: #ff5f0c;
     transition: .3s;
 }
 
-.service .service-item:hover i {
+.competence .competence-item:hover i {
     font-size: 75px;
 }
 
-.service .service-text {
+.competence .competence-text {
     position: relative;
     width: calc(100% - 120px);
     padding: 0 30px;
 }
 
-.service .service-text h3 {
+.competence .competence-text h3 {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
     transition: 1s;
 }
 
-.service .service-text p {
+.competence .competence-text p {
     margin: 0;
     font-size: 16px;
     transition: 1s;
 }
 
-.service .service-item:hover .service-text h3,
-.service .service-item:hover .service-text p {
+.competence .competence-item:hover .competence-text h3,
+.competence .competence-item:hover .competence-text p {
     color: #000000;
 }
 
 @media (max-width: 575.98px) {
-    .service .service-text h3 {
+    .competence .competence-text h3 {
         font-size: 16px;
         margin-bottom: 5px;
     }
     
-    .service .service-text p {
+    .competence .competence-text p {
         font-size: 14px;
     }
 }
@@ -1040,123 +1040,15 @@ a:focus {
 }
 
 /*******************************/
-/********* Pricing CSS *********/
+/******** Portfolio CSS ********/
 /*******************************/
-.price {
-    position: relative;
+.modal-body a img {
     width: 100%;
-    padding: 45px 0 15px 0;
 }
 
-.price .row {
-    padding: 0 15px;
+.product-video * {
+    width: 100%;
 }
-
-.price .col-md-4 {
-    padding: 0;
-}
-
-.price .price-item {
-    position: relative;
-    margin-bottom: 30px;
-    background: #ffffff;
-}
-
-.price .featured-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    z-index: 1;
-}
-
-.price .price-header,
-.price .price-body,
-.price .price-footer {
-    position: relative;
-    text-align: center;
-}
-
-.price .price-header {
-    padding: 45px 0 30px 0;
-    color: #414141;
-}
-
-.price .price-item.featured-item .price-header {
-    color: #ff5f0c;
-}
-
-.price .price-title h2 {
-    font-size: 25px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.price .price-prices h2 {
-    font-size: 45px;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.price .price-prices h2 small {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 9px;
-    margin-left: -12px;
-}
-
-.price .price-prices h2 span {
-    margin-left: 1px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.price .price-item.featured-item h2 {
-    color: #ff5f0c;
-}
-
-.price .price-body {
-    padding: 0 0 20px 0;
-}
-
-.price .price-description ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.price .price-description ul li {
-    padding: 0 0 20px 0;
-}
-
-.price .price-item .price-action {
-    padding-bottom: 45px;
-}
-
-.price .price-item .price-action .btn {
-    color: #ffffff;
-    background: #414141;
-    box-shadow: inset 0 0 0 50px #414141;
-}
-
-.price .price-item .price-action .btn:hover {
-    color: #414141;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #414141;
-    border-color: #414141;
-}
-
-.price .price-item.featured-item .price-action .btn {
-    color: #ffffff;
-    background: #ff5f0c;
-    box-shadow: inset 0 0 0 50px #ff5f0c;
-}
-
-.price .price-item.featured-item .price-action .btn:hover {
-    color: #ff5f0c;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ff5f0c;
-    border-color: #ff5f0c;
-}
-
 
 /*******************************/
 /********* Contact CSS *********/
@@ -1165,7 +1057,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: #ff5f0c;
+    background: #fabe18;
 }
 
 .contact .container-fluid {
@@ -1173,70 +1065,35 @@ a:focus {
     background-size: contain;
 }
 
-.contact .contact-form {
+.contact .contact-text {
     position: relative;
     padding: 90px 0 90px 45px;
-    background: #ff5f0c;
+    background: #fabe18;
 }
 
-.contact .contact-form input {
-    color: #ffffff;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
 
-.contact .contact-form textarea {
-    color: #ffffff;
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
-.contact .contact-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
-}
-
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
-}
-
-.contact .contact-form .btn {
+.contact .contact-text .btn {
     margin-top: 35px;
-    color: #ff5f0c;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
+    color: #000000;
+    background: #c8912d;
+    box-shadow: inset 0 0 0 50px #c8912d;
 }
 
-.contact .contact-form .btn:hover {
-    color: #ffffff;
+.contact .contact-text .btn:hover {
+    color: #000000;
     background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
+    box-shadow: inset 0 0 0 0 #ff5f0c;
+    border-color: #000000;
 }
 
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-style: italic;
-    color: #ffffff;
-}
+
 
 @media (max-width: 767.98px) {
     .contact .container-fluid {
         background: none;
     }
     
-    .contact .contact-form {
+    .contact .contact-text {
         padding: 90px 0;
     }
 }
