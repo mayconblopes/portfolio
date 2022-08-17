@@ -5,7 +5,7 @@ from portfolio.models import About, Iam, Competence, Experience, Award, Papper, 
 
 def index(request):
     about = About.objects.all().first()
-    iam = Iam.objects.all().first()
+    iam = Iam.objects.all()
     competences = Competence.objects.all()
     experiences = Experience.objects.all()
     awards = Award.objects.all()
@@ -19,10 +19,8 @@ def index(request):
         'simple_description': about.simple_description,
         'more_description': about.more_description,
 
-        # Iam Object attributes
-        'hello_msg': iam.hello_msg,
-        'name': iam.name,
-        'featured_skills': iam.featured_skills,
+        # Iam Object
+        'iam': iam[0],
 
         # Competences Objects
         'competences': competences,
