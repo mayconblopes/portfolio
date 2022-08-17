@@ -9,7 +9,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
         <!-- TODO Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <link rel="shortcut icon" href="{%  static 'img/favicon.png' %}">
 
         <!-- Google Font -->
 <!--        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
@@ -63,10 +63,10 @@
                     <div class="col-sm-12 col-md-6">
                         <div class="hero-content">
                             <div class="hero-text">
-                                <p>{{ hello_msg }}</p>
-                                <h1>{{ name }}</h1>
+                                <p>{{ iam.hello_msg }}</p>
+                                <h1>{{ iam.name }}</h1>
                                 <h2></h2>
-                                <div class="typed-text">{{ featured_skills }}</div>
+                                <div class="typed-text">{{ iam.featured_skills }}</div>
                             </div>
                             <div class="hero-btn">
                                 <a class="btn" target="_blank" href="https://www.linkedin.com/in/mayconblopes/">LinkedIn</a>
@@ -326,8 +326,8 @@
         <div class="blog" id="blog">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Articles</h2>
+                    <p>Blog</p>
+                    <h2>Últimos Artigos</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
@@ -350,26 +350,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="blog-img">
-                                <img src="{% static 'img/blog-2.jpg' %}" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -381,23 +361,23 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="footer-info">
-                        <h2>Kate Winslet</h2>
-                        <h3>123 Street, New York, USA</h3>
+                        <h2>{{ iam.name }}</h2>
+                        <h3>{{ iam.address }}</h3>
                         <div class="footer-menu">
-                            <p>+012 345 67890</p>
-                            <p>info@example.com</p>
+                            <p>{{ iam.telephone }}</p>
+                            <p>{{ iam.email }}</p>
                         </div>
                         <div class="footer-social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" href="{{ iam.linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" href="{{ iam.github }}"><i class="fa-brands fa-github"></i></a>
+                            <a target="_blank" href="{{ iam.twitter }}"><i class="fab fa-twitter"></i></a>
+                            <a target="_blank" href="{{ iam.whatsapp }}"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a target="_blank" href="{{ iam.instagram }}"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p>&copy; <a href="#">Porfolio de {{ iam.name }}</a>, Todos os Direitos Reservados | Designed By <a href="https://github.com/mayconblopes">mayconblopes</a></p>
                 </div>
             </div>
         </div>
@@ -416,7 +396,6 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<!--        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="{% static 'lib/easing/easing.min.js' %}"></script>
