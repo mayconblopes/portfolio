@@ -21,11 +21,10 @@ class BlogPost(models.Model):
     cover = models.URLField(verbose_name='URL da imagem da capa')
     content = models.TextField(max_length=5000, verbose_name='Conteúdo do post')
     pub_date = models.DateField(verbose_name='Data de publicação', blank=True, null=True)
-
     likes = models.IntegerField(null=True, blank=True)
 
     class Meta:
-        ordering = ('pub_date', 'title',)
+        ordering = ('-pub_date', 'title',)
 
     def __str__(self):
         return f'{self.author}: {self.title}'
