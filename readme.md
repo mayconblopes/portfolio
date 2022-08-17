@@ -26,10 +26,11 @@ criar uma silhueta nas cores do tema do site. Também usei o Gimp para isso.
 <img src="https://i.postimg.cc/Dwxrt7pM/favicon.png" width="250px">
 <br>
 
-<h2>Centralizando o conteúdo About</h2>
+<h2>O conteúdo detalhado do About</h2>
 No conteúdo About ("Um pouco mais sobre mim"), após clicar no botão "Saiba mais" um conteúdo mais detalhado é apresentado,
 com uma quantidade maior de texto. Isso fazia com que o usuário tivesse que rolar a página de volta ao início do conteúdo 
-About para começar a ler novamente o novo texto.
+About para começar a ler novamente o novo texto. Para melhorar a experiência do usuário, criei um código javascript 
+que automaticamente rola a página para o início do novo texto.
 
 <h2>Models do Django para evitar alteração no código fonte</h2>
 Criei diversos modelos (Model.models) para que a edição do conteúdo do site pudesse ser modificada sem necessidade de 
@@ -72,3 +73,6 @@ Para saber mais sobre como criar janelas modais de forma muito prática, recomen
     <li><a href="https://lokeshdhakar.com/projects/lightbox2/#getting-started">Lightbox</a></li>
 </ol>
 
+<hr>
+Essas são apenas algumas curiosidades e não uma lista completa de todas as etapas do desenvolvimento deste projeto, 
+o qual pode ser melhor entendido olhando-se o código neste respositório e o histórico de commits.
