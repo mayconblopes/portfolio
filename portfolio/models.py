@@ -5,6 +5,14 @@ class Iam(models.Model):
     hello_msg = models.CharField(max_length=100, verbose_name="Mensagem de boas vindas")
     name = models.CharField(max_length=5000, verbose_name="Meu nome")
     featured_skills = models.CharField(max_length=5000, verbose_name="Tags de competências [separe com vírgula]")
+    address = models.CharField(max_length=750, verbose_name="Endereço profissional")
+    telephone = models.CharField(max_length=750, verbose_name="Número de telefone")
+    email = models.EmailField(verbose_name="E-mail")
+    linkedin = models.URLField(null=True, blank=True)
+    github = models.URLField(null=True, blank=True)
+    twitter = models.URLField(null=True, blank=True)
+    whatsapp = models.URLField(null=True, blank=True)
+    instagram = models.URLField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'I Am'
