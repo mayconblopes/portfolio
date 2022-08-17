@@ -13,7 +13,8 @@ abusando do amarelo e do preto. Algumas imagens que usei de referência:<br>
 <img src="https://cdn.dribbble.com/users/335922/screenshots/14084341/media/6e960ed27b325d29e1d380f428b0244c.jpeg" width="250px">
 
 <h2>O dilema da gravata</h2>
-[![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://youtu.be/z_tYQXtl5e4) <br>
+<a target="_blank" href="https://youtu.be/z_tYQXtl5e4"><img src="https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif"></a>
+<br>
 A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
 então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>, que 
 inclusive foi utilizado ao longo de todo o projeto para edição de imagens e ícones.
@@ -40,13 +41,14 @@ personalização do conteúdo do site e como este é exibido. Por exemplo, criei
 modelo referente às competências profissionais e ao alterar o conteúdo deste atributo, a posição do objeto na página 
 é modificada, de forma que se torna possível escolher a posição de cada um desses elementos do site diretamente no 
 Admin. Além disso, alterei o Admin para permitir edição de certos campos diretamente na ListView dos models.
-![Admin-list-editable.png](https://i.postimg.cc/D01n3bzg/Admin-list-editable.png)
-
+<img src="https://i.postimg.cc/D01n3bzg/Admin-list-editable.png">
+<br/>
 <h2>Alternância de classes no HTML para influenciar o CSS dinamicamente, sem JavaSript</h2>
 Na linha do tempo das minhas experiências profissionais, eu queria que cada bloco ficasse de um lado da linha do 
 tempo, conforme imagem abaixo:<br>
-![tragetoria-profissional.png](https://i.postimg.cc/h42PT0y4/tragetoria-profissional.png)
-<br>
+<img src="https://i.postimg.cc/h42PT0y4/tragetoria-profissional.png">
+<br/>
+
 Consegui fazer isso de forma muito interessante e rápida sem usar JavaScript, alterando dinamicamente a classe dos 
 elementos de acordo com a ordem de listagem. O primeiro elemento a ser exibido vai para o lado esquerdo, o 
 segundo vai para o lado direito, o terceiro novamente para o lado esquerdo e assim sucessivamente. 
@@ -61,7 +63,8 @@ trechos do código, como por exemplo para criar IDs dinâmicas para as janelas m
 As janelas modais são aquelas que exibem conteúdos novos dentro da página atual, ou seja, sem abrir uma nova página. 
 Eu usei bastante deste recurso no Portfolio:
 <br>
-[![Janelas-modais-Adobe-Express.gif](https://i.postimg.cc/SsDbZr2M/Janelas-modais-Adobe-Express.gif)](https://www.youtube.com/watch?v=Mhuz1PnIfqU)
+<a target="_blank" href="https://www.youtube.com/watch?v=Mhuz1PnIfqU"><img src="https://i.postimg.cc/SsDbZr2M/Janelas-modais-Adobe-Express.gif"></a>
+
 <br>
 Para saber mais sobre como criar janelas modais de forma muito prática, recomendo os seguintes links:
 <ol>
