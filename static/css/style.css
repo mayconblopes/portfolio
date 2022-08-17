@@ -1212,6 +1212,7 @@ a:focus {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .footer .footer-menu p {
@@ -1266,7 +1267,7 @@ a:focus {
     height: 1px;
     top: 0;
     left: 25%;
-    background: rgba(256, 256, 256, .2);
+    background: #ff5f0c;
 }
 
 .footer .copyright p {
@@ -1300,7 +1301,7 @@ a:focus {
     }
 
     .footer .footer-menu p {
-        font-size: 16px;
+        font-size: 12px;
         line-height: 16px;
         padding: 0 5px;
     }
