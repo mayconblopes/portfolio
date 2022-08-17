@@ -1,18 +1,29 @@
 <h1>Meu Portfolio</h1>
 Este projeto foi criado durante a minha <strong>Certificação Google Ux Design</strong>. Um dos trabalhos requeridos 
-foi a criação 
-de um 
-portfolio, 
-recomendando-se a utilização de sistemas de criação de páginas como Wix, mas eu preferi colocar a mão na massa e 
-fazer tudo em Python e Django, usando CSS, HMTL e Javascript para o FrontEnd.
+foi a criação de um portfolio, recomendando-se a utilização de sistemas de criação de páginas como Wix, 
+mas eu preferi colocar a mão na massa e fazer tudo em Python e Django para o backend e usando CSS, HMTL e Javascript 
+para o FrontEnd.
 
 A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
+
+<h2>Tema: cores e fonts</h2>
+Minha inspiração para este projeto foi o tema do Ridge Racer Type 4, um game das antigas, com design muito bonito, 
+abusando do amarelo e do preto. Algumas imagens que usei de referência:<br>
+<img src="https://greenhillszone.files.wordpress.com/2016/03/gfs_13419_2_2.jpg" width="250px">
+<img src="https://cdn.dribbble.com/users/335922/screenshots/14084341/media/6e960ed27b325d29e1d380f428b0244c.jpeg" width="250px">
 
 <h2>O dilema da gravata</h2>
 [![gravata-gimp.gif](https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif)](https://youtu.be/z_tYQXtl5e4) <br>
 A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
 então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>, que 
 inclusive foi utilizado ao longo de todo o projeto para edição de imagens e ícones.
+
+<h2>Favicon</h2>
+Falando em Gimp, foi com ele que eu criei o Favicon do site. Usei a mesma foto acima (do dilema da gravata) para 
+criar uma silhueta nas cores do tema do site. Também usei o Gimp para isso.
+<br>
+<img src="https://i.postimg.cc/Dwxrt7pM/favicon.png" width="250px">
+<br>
 
 <h2>Centralizando o conteúdo About</h2>
 No conteúdo About ("Um pouco mais sobre mim"), após clicar no botão "Saiba mais" um conteúdo mais detalhado é apresentado,
@@ -29,12 +40,13 @@ personalização do conteúdo do site e como este é exibido. Por exemplo, criei
 modelo referente às competências profissionais e ao alterar o conteúdo deste atributo, a posição do objeto na página 
 é modificada, de forma que se torna possível escolher a posição de cada um desses elementos do site diretamente no 
 Admin. Além disso, alterei o Admin para permitir edição de certos campos diretamente na ListView dos models.
-[![Admin-list-editable.png](https://i.postimg.cc/D01n3bzg/Admin-list-editable.png)](https://postimg.cc/30rPgNm4)
+![Admin-list-editable.png](https://i.postimg.cc/D01n3bzg/Admin-list-editable.png)
 
 <h2>Alternância de classes no HTML para influenciar o CSS dinamicamente, sem JavaSript</h2>
 Na linha do tempo das minhas experiências profissionais, eu queria que cada bloco ficasse de um lado da linha do 
-tempo, conforme imagem abaixo:
-[![tragetoria-profissional.png](https://i.postimg.cc/h42PT0y4/tragetoria-profissional.png)](https://postimg.cc/SjzhpcbH)
+tempo, conforme imagem abaixo:<br>
+![tragetoria-profissional.png](https://i.postimg.cc/h42PT0y4/tragetoria-profissional.png)
+<br>
 Consegui fazer isso de forma muito interessante e rápida sem usar JavaScript, alterando dinamicamente a classe dos 
 elementos de acordo com a ordem de listagem. O primeiro elemento a ser exibido vai para o lado esquerdo, o 
 segundo vai para o lado direito, o terceiro novamente para o lado esquerdo e assim sucessivamente. 
@@ -53,6 +65,7 @@ Eu usei bastante deste recurso no Portfolio:
 <br>
 Para saber mais sobre como criar janelas modais de forma muito prática, recomendo os seguintes links:
 <ol>
-    <li><a src="https://getbootstrap.com/docs/4.0/components/modal/">Getbootstrap</a></li>
-    <li><a src="https://lokeshdhakar.com/projects/lightbox2/#getting-started">Lightbox</a></li>
+    <li><a href="https://getbootstrap.com/docs/4.0/components/modal/">Getbootstrap</a></li>
+    <li><a href="https://lokeshdhakar.com/projects/lightbox2/#getting-started">Lightbox</a></li>
 </ol>
+
