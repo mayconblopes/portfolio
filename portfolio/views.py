@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from blog.views import BlogPubPostListView
 from portfolio.models import About, Iam, Competence, Experience, Award, Papper, PortfolioItem
 
 
@@ -11,6 +12,7 @@ def index(request):
     awards = Award.objects.all()
     pappers = Papper.objects.all()
     portfolio_items = PortfolioItem.objects.all()
+    posts = BlogPubPostListView.queryset
 
     context = {
 
@@ -36,6 +38,8 @@ def index(request):
 
         # PortfolioItems Objects
         'portfolio_items': portfolio_items,
+
+        'posts': posts,
     }
 
     return render(request, 'index.html', context)
