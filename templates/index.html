@@ -36,7 +36,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">QuemSou?</a>
+                <a href="/" class="navbar-brand"><i class="fa-solid fa-code"></i></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -46,10 +46,10 @@
                         <a href="#home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">Sobre</a>
                         <a href="#competence" class="nav-item nav-link">Competências</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
+                        <a href="#experience" class="nav-item nav-link">Experiência</a>
                         <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
                         <a href="#blog" class="nav-item nav-link">Blog</a>
+                        <a href="#contact" class="nav-item nav-link">Contato</a>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                         <div id="about-me" class="about-content">
                             <div class="section-header text-left">
                                 <p>Um pouco mais sobre mim</p>
-                                <h2>{{ about_title }}</h2>
+                                <h2 id="about-title">{{ about_title }}</h2>
                             </div>
                             <div class="about-text">
 
@@ -302,27 +302,6 @@
         </div>
         <!-- Portfolio End -->
 
-
-<!-- Contact Start -->
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8 banner">
-                            <div class="contact-text section-header">
-                                <h2>Entre em <span>contato</span> comigo.</h2>
-                                <h3>Será um grande prazer conversarmos!</h3>
-                                <a target="_blank" href="{{ iam.whatsapp }}" class="btn">Mandar mensagem via WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-
         <!-- Blog Start -->
         <div class="blog" id="blog">
             <div class="container">
@@ -331,8 +310,8 @@
                     <h2>Últimos Artigos</h2>
                 </div>
 
-                {% for post in latest_4_posts %}
                 <div class="row">
+                    {% for post in latest_4_posts %}
                     <div class="col-lg-6">
                         <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
                             <div class="blog-img">
@@ -351,16 +330,34 @@
                                 <p>
                                     {{ post.content|truncatechars:250 }}
                                 </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                                <a class="btn" href="">Leia mais <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
         <!-- Blog End -->
 
+        <!-- Contact Start -->
+        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8 banner">
+                            <div class="contact-text section-header">
+                                <h2>Entre em <span>contato</span> comigo.</h2>
+                                <h3>Será um grande prazer conversarmos!</h3>
+                                <a target="_blank" href="{{ iam.whatsapp }}" class="btn">Mandar mensagem via WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
 
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
