@@ -476,7 +476,7 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: #ff5f0c;
+    background: #ffbe18;
     z-index: -1;
 }
 
@@ -487,7 +487,7 @@ a:focus {
     height: 3px;
     top: 11px;
     left: 3px;
-    background: #ff5f0c;
+    background: #ffbe18;
     z-index: 1;
 }
 
@@ -1056,7 +1056,7 @@ a:focus {
 .contact {
     position: relative;
     width: 100%;
-    margin: 45px 0;
+    /* margin: 45px 0; */
     background: #fabe18;
 }
 
@@ -1180,7 +1180,7 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
-    margin-top: 45px;
+    /* margin-top: 45px; */
     background: #fabe18;
 }
 
