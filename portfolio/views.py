@@ -12,7 +12,7 @@ def index(request):
     awards = Award.objects.all()
     pappers = Papper.objects.all()
     portfolio_items = PortfolioItem.objects.all()
-    latest_4_posts = BlogPubPostListView.queryset[:3]
+    latest_4_posts = BlogPubPostListView.queryset[:4]
 
     context = {
 
