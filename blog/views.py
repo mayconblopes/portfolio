@@ -8,3 +8,7 @@ class BlogPubPostListView(ListView):
     model = BlogPost
     queryset = BlogPost.objects.all().filter(is_draft=False)
     context_object_name = 'list_of_pub_posts'
+
+
+def blog_index(request):
+    return render(request, 'blog_index.html')
