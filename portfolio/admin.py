@@ -1,12 +1,8 @@
 from django.contrib import admin
-from blog.models import Author, BlogPost
 from portfolio.models import Iam, About, Competence, Experience, Award, Papper, PortfolioItem
 
 admin.site.register(Iam)
 admin.site.register(About)
-admin.site.register(BlogPost)
-admin.site.register(Author)
-
 
 @admin.register(Experience)
 class CompetenceAdmin(admin.ModelAdmin):

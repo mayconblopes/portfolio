@@ -160,6 +160,11 @@ a:focus {
 .navbar .navbar-brand img {
     max-width: 100%;
     max-height: 40px;
+    background: url(/static/img/portfolio_logo_black.png) no-repeat center;
+    background-size: contain;
+    scale: 3.5;
+    margin-left: 50px;
+
 }
 
 .navbar .dropdown-menu {
@@ -188,8 +193,11 @@ a:focus {
         color: #000000;
     }
     
-    .navbar.nav-sticky .navbar-brand {
+    .navbar.nav-sticky .navbar-brand img {
         color: #fabe18;
+        background: url(/static/img/portfolio_logo_yellow.png) no-repeat center;
+        background-size: contain;
+        scale: 2.5;
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -230,6 +238,15 @@ a:focus {
     
     .navbar .navbar-brand {
         color: #fabe18;
+    }
+
+    .navbar .navbar-brand img {
+        max-width: 100%;
+        max-height: 40px;
+        background: url(/static/img/portfolio_logo_yellow.png) no-repeat center;
+        background-size: contain;
+        scale: 2.5;
+    
     }
 
     .navbar .navbar-brand:hover {

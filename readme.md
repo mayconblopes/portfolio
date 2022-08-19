@@ -6,6 +6,18 @@ para o FrontEnd.
 
 A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
 
+<h2>Logo</h2>
+Para o logo, utilizei uma estilização do meu proprio nome, simulando traços de pincel. Para criar o estilo, usei uma 
+ferramenta online chamada <a target="_blank" href="https://www.tailorbrands.com/">Tailorbrands</a>. Editei o resulado 
+no Gimp, acrescentando alguns elementos. 
+<br/>
+
+<a target="_blank" href="https://youtu.be/XdeOzhISS34"><img src="https://i.postimg.cc/3w0YrLRN/logo.gif"></a>
+<br/>
+
+Depois vetorizei a imagem com outra ferramenta online chamada
+<a target="_blank" href="https://products.aspose.app/svg/pt/image-vectorization">Aspose</a>. 
+
 <h2>Tema: cores e fonts</h2>
 Minha inspiração para este projeto foi o tema do Ridge Racer Type 4, um game das antigas, com design muito bonito, 
 abusando do amarelo e do preto. Algumas imagens que usei de referência:<br>

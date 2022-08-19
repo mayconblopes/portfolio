@@ -9,7 +9,7 @@
         <title>{{ name }}</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- TODO Favicon -->
+        <!-- Favicon -->
         <link rel="shortcut icon" href="{%  static 'img/favicon.png' %}">
 
         <!-- Google Font -->
@@ -36,7 +36,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="/" class="navbar-brand"><i class="fa-solid fa-code"></i></a>
+                <a href="/" class="navbar-brand"><img src="{% static 'img/portfolio_logo_transparent.png' %}" alt="Portfolio Logo"></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -181,7 +181,7 @@
         <!-- Job Experience End -->
 
         <!-- Banner Awards Start -->
-        <div class="banner" data-wow-delay="0.1s">
+        <div class="banner">
             <div class="container">
                 <div class="section-header text-center">
                     <p>Premiações</p>
@@ -199,7 +199,7 @@
         <!-- Banner Awards End -->
 
         <!-- Banner Pappers Start -->
-        <div class="banner" data-wow-delay="0.1s">
+        <div class="banner">
             <div class="container">
                 <div class="section-header text-center">
                     <p>Obras produzidas</p>
@@ -220,14 +220,14 @@
         <!-- Portfolio Start -->
         <div class="portfolio" id="portfolio">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                <div class="section-header text-center">
                     <p>Meu Portfolio Dev</p>
                     <h2>Alguns dos meus trabalhos como Dev</h2>
                 </div>
 
                 <div class="row portfolio-container">
                     {% for portfolio_item in portfolio_items %}
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1">
                         <div class="portfolio-wrap">
                             <div class="portfolio-img">
                                 <img src="{{portfolio_item.image_url}}" />
@@ -306,7 +306,7 @@
         <!-- Blog Start -->
         <div class="blog" id="blog">
             <div class="container">
-                <div class="section-header text-center wow zoomIn">
+                <div class="section-header text-center">
                     <p>Últimos Artigos</p>
                     <a class="btn" target="_blank" href="{% url 'blog_index' %}">Blog <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
@@ -314,7 +314,7 @@
                 <div class="row">
                     {% for post in latest_4_posts %}
                     <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
                             <div class="blog-img">
                                 <img src="{{ post.cover }}" alt="Blog">
                             </div>
