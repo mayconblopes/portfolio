@@ -1,76 +1,10 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
 {% load static %}
 
-<html lang="pt-br">
+{% block content %}
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{%  static 'img/minimum_favicon.png' %}">
-
-    <title>Minimum</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-<!--    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">-->
-    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9] -->
-<!--        <script src="{% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js' %}"></script>-->
-<!--        <script src="{% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js' %}"></script>-->
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="{% url 'blog_index' %}"><i class="fa-solid fa-compress"></i></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="{% url 'blog_index' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="/#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/#contact">Contato</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Header -->
+<!-- Page Header -->
     <header class="intro-header" >
         <div class="container">
             <div class="row">
@@ -85,40 +19,37 @@
         </div>
     </header>
 
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for post in list_of_pub_posts %}
-                <div class="post-preview">
-                    <a href="{{post.slug}}">
-                        <h2 class="post-title">
-                            {{ post.title|lower|capfirst }}
-                        </h2>
-                        <h3 class="post-subtitle">
-                            {{ post.content|truncatechars:100 }}
-                        </h3>
-                    </a>
-                    {{post.stars}}
-                    <p class="post-meta">Postado por <a data-toggle="modal" data-target="#author{{post.author.id}}-modal" href="#">{{ post.author.name }}</a> em {{ post.pub_date }}</p>
-                </div>
+
+                <div class="post-flex-container">
+
+                    <div class="cover-preview">
+                        <p><img src="{{post.cover}}" alt="Post Cover"></p>
+                    </div>
+
+                    <div class="post-preview">
+                        <a href="{{post.slug}}">
+                            <h2 class="post-title">
+                                {{ post.title|lower|capfirst }}
+                            </h2>
+                            <h3 class="post-subtitle">
+                                {{ post.content|truncatechars:100 }}
+                            </h3>
+                        </a>
+                        {{post.stars}}
+                        <p class="post-meta">Postado por <a data-toggle="modal" data-target="#author{{post.author.id}}-modal" href="#">{{ post.author.name }}</a> em {{ post.pub_date }}</p>
+                    </div>
+
+                 </div>
                 <hr>
 
-                <!-- Modal -->
-                <div class="modal fade" id="author{{post.author.id}}-modal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Sobre o autor</h5>
-                            </div>
-                            <div class="modal-body">
-                                <h1>{{post.author.name}}</h1>
-                                <h3>{{post.author.bio}}</h3>
-                                <h5>e-mail: {{post.author.email}}</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--Modal HTML code-->
+                {% include 'partials/author_modal.html' %}
 
                 {% endfor %}
 
@@ -131,59 +62,7 @@
             </div>
         </div>
     </div>
-
     <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+{% endblock content %}
 
-    <!-- jQuery -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
-    <script src="{% static 'js/contact_me.js' %}"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="{% static 'js/clean-blog.min.js' %}"></script>
-
-</body>
-
-</html>
