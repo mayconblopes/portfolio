@@ -373,6 +373,11 @@ hr.small {
     width: 100%;
 }
 
+#tags {
+    font-style: italic;
+    color: #777;
+}
+
 @media only screen and (min-width:768px) {
     .post-preview>a>.post-title {
         font-size: 36px
@@ -549,4 +554,20 @@ img::-moz-selection {
     background: 0 0
 }
 
+.modal-content {
+    max-width: 365px;
+}
 
+.modal-header {
+    display: flex;
+    align-items: center;
+
+}
+
+.modal-header #title {
+    margin-right: auto;
+}
+
+.modal-header span, #title {
+
+}
