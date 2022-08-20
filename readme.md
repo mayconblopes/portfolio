@@ -12,7 +12,9 @@ ferramenta online chamada <a target="_blank" href="https://www.tailorbrands.com/
 no Gimp, acrescentando alguns elementos. 
 <br/>
 
-<a target="_blank" href="https://youtu.be/XdeOzhISS34"><img src="https://i.postimg.cc/3w0YrLRN/logo.gif"></a>
+<a target="_blank" href="https://youtu.be/XdeOzhISS34">
+    <img src="https://i.postimg.cc/5yVn1xG1/portfolio-logo-yellow.png">  
+</a>
 <br/>
 
 Depois vetorizei a imagem com outra ferramenta online chamada
