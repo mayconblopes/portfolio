@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load blog_extras %}
+
+{% block content %}
+
+    <!-- Page Header -->
+    <header class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ post.title }}</h1>
+                        <h4 class="subheading">Tags: {{ post.tags }}</h4>
+                        <span class="meta">Postado por <a data-toggle="modal" data-target="#author{{post.author.id}}-modal" href="#">{{ post.author.name }}</a> em {{ post.pub_date }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% include 'partials/author_modal.html' %}
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p><img class="post-cover" src="{{post.cover}}" alt="Post Cover"></p>
+
+                    <div style="text-align:justify">
+                        {{ post.content|convert_markdown|safe }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <hr>
+
+{% endblock content %}
