@@ -8,6 +8,7 @@ django = "*"
 fontawesomefree = "*"
 python-decouple = "*"
 psycopg2 = "*"
+markdown = "*"
 
 [dev-packages]
 
