@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load blog_extras %}
+
 {% block content %}
 
 <!-- Page Header -->
@@ -30,6 +32,7 @@
 
                     <div class="cover-preview">
                         <p><img src="{{post.cover}}" alt="Post Cover"></p>
+                        <p id="tags">{{post.tags|lower}}</p>
                     </div>
 
                     <div class="post-preview">
@@ -38,7 +41,7 @@
                                 {{ post.title|lower|capfirst }}
                             </h2>
                             <h3 class="post-subtitle">
-                                {{ post.content|truncatechars:100 }}
+                                {{ post.content|truncatechars:100|convert_markdown|safe }}
                             </h3>
                         </a>
                         {{post.stars}}
