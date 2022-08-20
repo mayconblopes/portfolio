@@ -9,6 +9,9 @@ fontawesomefree = "*"
 python-decouple = "*"
 psycopg2 = "*"
 markdown = "*"
+gunicorn = "*"
+whitenoise = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 
