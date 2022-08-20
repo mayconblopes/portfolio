@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': config('NAME'),
         'USER': config('USER'),
         'PASSWORD': config('PASSWORD'),
-        'HOST': 'localhost',
+        'HOST': 'ec2-34-234-240-121.compute-1.amazonaws.com',
     }
 }
 
