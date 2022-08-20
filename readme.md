@@ -88,3 +88,6 @@ Para saber mais sobre como criar janelas modais de forma muito prática, recomen
 <hr>
 Essas são apenas algumas curiosidades e não uma lista completa de todas as etapas do desenvolvimento deste projeto, 
 o qual pode ser melhor entendido olhando-se o código neste respositório e o histórico de commits.
+
+<h2>Blog</h2>
+Adicionei ao projeto um blog 100% funcional.
