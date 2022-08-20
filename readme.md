@@ -13,7 +13,7 @@ no Gimp, acrescentando alguns elementos.
 <br/>
 
 <a target="_blank" href="https://youtu.be/XdeOzhISS34">
-    [![logo.gif](https://i.postimg.cc/hvWPtxD6/logo.gif)](https://postimg.cc/8J4Vy7rm)
+    <img src="https://i.postimg.cc/5yVn1xG1/portfolio-logo-yellow.png">  
 </a>
 <br/>
 
