@@ -32,7 +32,11 @@
 
                     <div class="cover-preview">
                         <p><img src="{{post.cover}}" alt="Post Cover"></p>
-                        <p id="tags">{{post.tags|lower}}</p>
+                        <div id="post-info">
+                            <p id="post-stars">{{post.stars}}</p>
+                            <p id="tags">{{post.tags|lower}}</p>
+                            <p class="post-meta">Postado por <a data-toggle="modal" data-target="#author{{post.author.id}}-modal" href="#">{{ post.author.name }}</a> em {{ post.pub_date }}</p>
+                        </div>
                     </div>
 
                     <div class="post-preview">
@@ -44,8 +48,6 @@
                                 {{ post.content|truncatechars:100|convert_markdown|safe }}
                             </h3>
                         </a>
-                        {{post.stars}}
-                        <p class="post-meta">Postado por <a data-toggle="modal" data-target="#author{{post.author.id}}-modal" href="#">{{ post.author.name }}</a> em {{ post.pub_date }}</p>
                     </div>
 
                  </div>
@@ -58,9 +60,15 @@
 
                 <!-- Pager -->
                 <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
+                    {% if page_obj.has_next %}
+                        <li class="next">
+                            <a href="?page={{ page_obj.next_page_number }}">Mais antigos &rarr;</a>
+                        </li>
+                    {% elif not page_obj.has_next and page_obj.has_previous %}
+                        <li class="previous">
+                            <a href="?page={{ page_obj.previous_page_number }}">&larr; Mais recentes </a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

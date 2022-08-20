@@ -319,6 +319,15 @@ hr.small {
     max-width: 315px;
 }
 
+#post-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#post-info #post-stars {
+    text-align: center;
+}
+
 @media only screen and (max-width:768px) {
     .post-flex-container {
         flex-direction: column;
