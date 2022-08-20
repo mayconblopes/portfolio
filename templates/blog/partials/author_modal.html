@@ -3,7 +3,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Sobre o autor</h5>
+                <div id="title">
+                    <h5 class="modal-title" id="modal-label">Sobre o autor</h5>
+                </div>
+                <div id="close">
+                    <a class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
             </div>
             <div class="modal-body">
                 <h1>{{post.author.name}}</h1>
