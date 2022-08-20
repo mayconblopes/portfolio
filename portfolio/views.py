@@ -16,10 +16,8 @@ def index(request):
 
     context = {
 
-        # About Object attributes
-        'about_title': about.title,
-        'simple_description': about.simple_description,
-        'more_description': about.more_description,
+        # About Objects
+        'about': about,
 
         # Iam Object
         # 'iam': iam[0],

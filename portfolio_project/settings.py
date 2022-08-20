@@ -80,13 +80,22 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# test database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#prouction database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('NAME'),
         'USER': config('USER'),
         'PASSWORD': config('PASSWORD'),
-        'HOST': 'ec2-34-234-240-121.compute-1.amazonaws.com',
+        'HOST': config('HOST'),
     }
 }
 

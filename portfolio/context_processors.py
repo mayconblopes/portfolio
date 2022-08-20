@@ -6,7 +6,7 @@ def iam_processor(request):
     Turn IAm objects available for all templates
     """
 
-    iam = Iam.objects.all()
-    return {
-            'iam': iam[0],
-    }
+    iam = Iam.objects.all().first()
+    context = {'iam': iam}
+
+    return context
