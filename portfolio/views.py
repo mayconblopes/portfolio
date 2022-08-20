@@ -6,7 +6,7 @@ from portfolio.models import About, Iam, Competence, Experience, Award, Papper, 
 
 def index(request):
     about = About.objects.all().first()
-    iam = Iam.objects.all()
+    # iam = Iam.objects.all() -> this is not necessary anymore, because I've created a context processor for IAm object
     competences = Competence.objects.all()
     experiences = Experience.objects.all()
     awards = Award.objects.all()
@@ -22,7 +22,7 @@ def index(request):
         'more_description': about.more_description,
 
         # Iam Object
-        'iam': iam[0],
+        # 'iam': iam[0],
 
         # Competences Objects
         'competences': competences,
