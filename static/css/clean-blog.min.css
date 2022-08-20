@@ -89,7 +89,7 @@ p a {
 
 a:focus,
 a:hover {
-    color: #0085A1
+    color: #ff5f0c;
 }
 
 a img:focus,
@@ -317,6 +317,14 @@ hr.small {
 
 .post-flex-container img {
     max-width: 315px;
+    border-radius: 20px;
+}
+
+
+.post-flex-container img:hover {
+    scale: 1.1;
+    transition: .5s;
+    cursor: pointer;
 }
 
 #post-info p {
@@ -380,6 +388,7 @@ hr.small {
 
 .post-cover {
     width: 100%;
+    box-shadow: black 2px 2px 5px;
 }
 
 #tags {

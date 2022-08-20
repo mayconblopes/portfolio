@@ -31,7 +31,9 @@
                 <div class="post-flex-container">
 
                     <div class="cover-preview">
-                        <p><img src="{{post.cover}}" alt="Post Cover"></p>
+                        <a href="{{post.slug}}">
+                            <p><img src="{{post.cover}}" alt="Post Cover"></p>
+                        </a>
                         <div id="post-info">
                             <p id="post-stars">{{post.stars}}</p>
                             <p id="tags">{{post.tags|lower}}</p>
