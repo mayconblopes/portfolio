@@ -46,8 +46,8 @@
                         <a href="#home" class="nav-item nav-link active">Home</a>
                         <a href="#about" class="nav-item nav-link">Sobre</a>
                         <a href="#competence" class="nav-item nav-link">Competências</a>
-                        <a href="#experience" class="nav-item nav-link">Experiência</a>
                         <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                        <a href="#experience" class="nav-item nav-link">Experiência</a>
                         <a href="#blog" class="nav-item nav-link">Últimos Artigos</a>
                         <a href="#contact" class="nav-item nav-link">Contato</a>
                         <a target="_blank" href="/blog" class="nav-item nav-link">Blog <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -70,9 +70,9 @@
                                 <h2></h2>
                                 <div class="typed-text">{{ iam.featured_skills }}</div>
                             </div>
-                            <div class="hero-btn">
-                                <a class="btn" target="_blank" href="https://www.linkedin.com/in/mayconblopes/">LinkedIn</a>
-                                <a class="btn" target="_blank" href="https://github.com/mayconblopes">GitHub</a>
+                            <div>
+                                <a class="btn-hero btn" target="_blank" href="{{iam.linkedin}}">LinkedIn</a>
+                                <a class="btn-hero btn" target="_blank" href="{{iam.github}}">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
         </div>
         <!-- About End -->
 
-        <!-- competence Start -->
+        <!-- Competence Start -->
         <div class="competence" id="competence">
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -151,73 +151,9 @@
                 </div>
             </div>
         </div>
-        <!-- competence End -->
+        <!-- Competence End -->
 
-        <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Experiência</p>
-                    <h2>Trajetória Profissional e Acadêmica</h2>
-                </header>
-
-                <div class="timeline">
-                    {% for experience in experiences %}
-                    <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
-                    <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">{{experience.when}}</div>
-                            <h2>{{experience.name}}</h2>
-                            <h4>{{experience.where}}</h4>
-                            <p>
-                                {{experience.description}}
-                            </p>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
-
-        <!-- Banner Awards Start -->
-        <div class="banner">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Premiações</p>
-                    <h2><span>Prêmios</span> e Reconhecimentos de <span>Instituições</span></h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        {% for award in awards %}
-                            <p id="link-award">{{award.who}}: <a target="_blank" href="{{award.link}}">{{award.description}}</a></p>
-                        {% endfor %}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Awards End -->
-
-        <!-- Banner Pappers Start -->
-        <div class="banner">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Obras produzidas</p>
-                    <h2>Obras <span>Científicas</span> e outros <span>Textos</span> produzidos</h2>
-                </div>
-                <div class="container banner-text">
-                    <p>
-                        {% for papper in pappers %}
-                            <p id="title-papper">{{papper.title}}</p>
-                            <p id="links-papper"><a target="_blank" href="#"> Click aqui para ler o resumo.</a> <a target="_blank" href="{{papper.link}}">Click aqui para ler a obra.</a></p>
-                        {% endfor %}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Banner Pappers End -->
-
-        <!-- Portfolio Start -->
+         <!-- Portfolio Start -->
         <div class="portfolio" id="portfolio">
             <div class="container">
                 <div class="section-header text-center">
@@ -239,7 +175,7 @@
                         </div>
                     </div>
 
-                    <!--Modal-->
+                    <!--Portfolio Modal-->
                     <div class="modal fade" id="modal-{{portfolio_item.id}}" tabindex="-1" role="dialog">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -302,6 +238,74 @@
             </div>
         </div>
         <!-- Portfolio End -->
+
+        <!-- Experience Start -->
+        <div class="experience" id="experience">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Experiência</p>
+                    <h2>Trajetória Profissional e Acadêmica</h2>
+                </header>
+
+                <div class="timeline">
+                    {% for experience in experiences %}
+                    <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
+                    <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">{{experience.when}}</div>
+                            <h2>{{experience.name}}</h2>
+                            <h4>{{experience.where}}</h4>
+                            <p>
+                                {{experience.description}}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Job Experience End -->
+
+        <!-- Banner Awards Start -->
+        <div id="banner-awards" class="banner">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Premiações</p>
+                    <h2><span>Prêmios</span> e Reconhecimentos de <span>Instituições</span></h2>
+                    <button id="more-awards-btn" class="btn-hero btn">Saiba mais</button>
+                </div>
+                <div id="more-awards-content" class="container banner-text hidden">
+                    <p>
+                        {% for award in awards %}
+                            <p id="link-award">{{award.who}}: <a target="_blank" href="{{award.link}}">{{award.description}}</a></p>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Awards End -->
+
+        <!-- Banner Pappers Start -->
+        <div id="banner-pappers" class="banner">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Obras produzidas</p>
+                    <h2>Obras <span>Científicas</span> e outros <span>Textos</span> produzidos</h2>
+                    <button id="more-pappers-btn" class="btn-hero btn">Saiba mais</button>
+                </div>
+                <div id="more-pappers-content" class="container banner-text hidden">
+                    <p>
+                        {% for papper in pappers %}
+                            <p id="title-papper">{{papper.title}}</p>
+                            <p id="links-papper"><a target="_blank" href="#"> Click aqui para ler o resumo.</a> <a target="_blank" href="{{papper.link}}">Click aqui para ler a obra.</a></p>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Pappers End -->
+
+
 
         <!-- Blog Start -->
         <div class="blog" id="blog">
@@ -413,6 +417,7 @@
         <!-- Template Javascript -->
         <script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/detail_about.js' %}"></script>
+        <script src="{% static 'js/detail_banner.js' %}"></script>
     </body>
 
 </html>
