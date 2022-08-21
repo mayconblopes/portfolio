@@ -7,8 +7,8 @@ para o FrontEnd.
 A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
 
 <h2>Logo</h2>
-Para o logo, utilizei uma estilização do meu proprio nome, simulando traços de pincel. Para criar o estilo, usei uma 
-ferramenta online chamada <a target="_blank" href="https://www.tailorbrands.com/">Tailorbrands</a>. Editei o resulado 
+Para o logo, utilizei uma estilização do meu próprio nome, simulando traços de pincel. Para criar o estilo, usei uma 
+ferramenta online chamada <a target="_blank" href="https://www.tailorbrands.com/">Tailorbrands</a>. Editei o resultado 
 no Gimp, acrescentando alguns elementos. 
 <br/>
 

@@ -292,7 +292,6 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    /* background: linear-gradient(rgb(122 22 22 / 95%), rgb(122 21 34 / 95%)), url(../img/hero-bg.jpg); */
     background: linear-gradient(rgb(250 190 24 / 98%), rgb(250 190 34 / 98%)), url(../img/about-bg.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
@@ -546,8 +545,8 @@ a:focus {
 
 .about .about-img img {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     background: linear-gradient(rgb(250 190 24 / 95%), rgb(250 190 34 / 95%)), url(../img/about-bg.jpg);
     background-position: bottom;
