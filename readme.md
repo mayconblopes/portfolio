@@ -1,6 +1,6 @@
 <h1>Neste projeto eu desenvolvi meu portfolio profissional e um blog sobre tecnologia e inovação</h1>
 
-<a target="_blank" href="https://mayconblopes.ml">
+<a target="_blank" href="http://www.mayconblopes.ml">
     <img src="https://i.postimg.cc/dQ6wWdYP/project-cover-1280x640.png">  
 </a>
 <br/>
@@ -98,4 +98,7 @@ Adicionei ao projeto um blog 100% funcional.
 <hr>
 Essas são apenas algumas curiosidades e não uma lista completa de todas as etapas do desenvolvimento deste projeto, 
 o qual pode ser melhor entendido olhando-se o código neste respositório e o histórico de commits.
+<hr>
+
+O projeto está no ar (fiz deploy pelo Heroku). Você pode conferir o projeto no seguinte endereço <a href="http://www.mayconblopes.ml" target="_blank">http://www.mayconblopes.ml<a>
 
