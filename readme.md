@@ -1,10 +1,28 @@
-<h1>Meu Portfolio</h1>
+<h1>Neste projeto eu desenvolvi meu portfolio profissional e um blog sobre tecnologia e inovação</h1>
+
+<a target="_blank" href="https://mayconblopes.ml">
+    <img src="https://i.postimg.cc/dQ6wWdYP/project-cover-1280x640.png">  
+</a>
+<br/>
 Este projeto foi criado durante a minha <strong>Certificação Google Ux Design</strong>. Um dos trabalhos requeridos 
 foi a criação de um portfolio, recomendando-se a utilização de sistemas de criação de páginas como Wix, 
 mas eu preferi colocar a mão na massa e fazer tudo em Python e Django para o backend e usando CSS, HMTL e Javascript 
 para o FrontEnd.
 
 A seguir, algumas curiosidades e soluções de código que achei interessante registrar.
+
+<h2>Tema: cores e fonts</h2>
+Minha inspiração para este projeto foi o tema do Ridge Racer Type 4, um game das antigas, com design muito bonito, 
+abusando do amarelo e do preto. Algumas imagens que usei de referência:<br>
+<img src="https://greenhillszone.files.wordpress.com/2016/03/gfs_13419_2_2.jpg" width="250px">
+<img src="https://cdn.dribbble.com/users/335922/screenshots/14084341/media/6e960ed27b325d29e1d380f428b0244c.jpeg" width="250px">
+
+<h2>O dilema da gravata</h2>
+<a target="_blank" href="https://youtu.be/z_tYQXtl5e4"><img src="https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif"></a>
+<br>
+A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
+então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>, que 
+inclusive foi utilizado ao longo de todo o projeto para edição de várias imagens e ícones.
 
 <h2>Logo</h2>
 Para o logo, utilizei uma estilização do meu próprio nome, simulando traços de pincel. Para criar o estilo, usei uma 
@@ -20,22 +38,9 @@ no Gimp, acrescentando alguns elementos.
 Depois vetorizei a imagem com outra ferramenta online chamada
 <a target="_blank" href="https://products.aspose.app/svg/pt/image-vectorization">Aspose</a>. 
 
-<h2>Tema: cores e fonts</h2>
-Minha inspiração para este projeto foi o tema do Ridge Racer Type 4, um game das antigas, com design muito bonito, 
-abusando do amarelo e do preto. Algumas imagens que usei de referência:<br>
-<img src="https://greenhillszone.files.wordpress.com/2016/03/gfs_13419_2_2.jpg" width="250px">
-<img src="https://cdn.dribbble.com/users/335922/screenshots/14084341/media/6e960ed27b325d29e1d380f428b0244c.jpeg" width="250px">
-
-<h2>O dilema da gravata</h2>
-<a target="_blank" href="https://youtu.be/z_tYQXtl5e4"><img src="https://i.postimg.cc/Nfnw2xDr/gravata-gimp.gif"></a>
-<br>
-A cor original da gravata é cinza, mas eu não queria que em todas as fotos a gravata tivesse a mesma cor sem graça... 
-então tingi digitalmente utilizando o excelente <a target="_blank" href="https://www.gimp.org/">Gimp</a>, que 
-inclusive foi utilizado ao longo de todo o projeto para edição de imagens e ícones.
-
 <h2>Favicon</h2>
-Falando em Gimp, foi com ele que eu criei o Favicon do site. Usei a mesma foto acima (do dilema da gravata) para 
-criar uma silhueta nas cores do tema do site. Também usei o Gimp para isso.
+Foi também com o Gimp que eu criei o Favicon do site, usando a mesma foto acima (do dilema da gravata) para 
+criar uma silhueta nas cores do tema do site.
 <br>
 <img src="https://i.postimg.cc/Dwxrt7pM/favicon.png" width="250px">
 <br>
@@ -44,11 +49,11 @@ criar uma silhueta nas cores do tema do site. Também usei o Gimp para isso.
 No conteúdo About ("Um pouco mais sobre mim"), após clicar no botão "Saiba mais" um conteúdo mais detalhado é apresentado,
 com uma quantidade maior de texto. Isso fazia com que o usuário tivesse que rolar a página de volta ao início do conteúdo 
 About para começar a ler novamente o novo texto. Para melhorar a experiência do usuário, criei um código javascript 
-que automaticamente rola a página para o início do novo texto.
+que automaticamente rola a página para o início do novo texto que dinamicamente é colocado na página. Repeti essa solução para a seção de prêmios/reconhecimentos e publicações científicas.
 
 <h2>Models do Django para evitar alteração no código fonte</h2>
 Criei diversos modelos (Model.models) para que a edição do conteúdo do site pudesse ser modificada sem necessidade de 
-alterar o código fonte da página, mas tão somente os próprios modelos. Por exemplo: para criar uma nova competência 
+alterar o código fonte da página. Por exemplo: para criar uma nova competência 
 profissional ou uma nova experiência de trabalho, basta criar um novo objeto correspondente na página de 
 Administração que cuidará de salvar o objeto no banco de dados e o site buscará os objetos no banco para serem 
 automaticamente exibidos no site. Também otimizei algumas funções do Admin do Django para facilitar a 
