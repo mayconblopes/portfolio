@@ -142,3 +142,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+# Resolves CSRF problem with HTTPS. See more https://docs.djangoproject.com/en/dev/releases/4.0/#format-change
+CSRF_TRUSTED_ORIGINS = ['https://www.mayconblopes.ml']
