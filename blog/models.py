@@ -29,7 +29,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título do post')
     slug = models.SlugField()
     cover = models.URLField(verbose_name='URL da imagem da capa')
-    content = models.TextField(max_length=5000, verbose_name='Conteúdo do post')
+    content = models.TextField(verbose_name='Conteúdo do post')
     pub_date = models.DateField(verbose_name='Data de publicação', blank=True, null=True)
     stars = models.CharField(max_length=5, verbose_name="Estrelas", choices=STARS_CHOICE)
 
