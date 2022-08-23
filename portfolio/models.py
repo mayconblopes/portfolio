@@ -101,3 +101,8 @@ class PortfolioItem(models.Model):
     website_link = models.URLField(verbose_name="Link do website", null=True, blank=True)
     index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
 
+    class Meta:
+        ordering = ('index_order',)
+
+    def __str__(self):
+        return self.name
