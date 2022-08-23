@@ -882,6 +882,11 @@ a:focus {
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
+
+.row {
+    align-items: flex-end;
+}
+
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
