@@ -28,8 +28,12 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% for post in list_of_pub_posts %}
 
+                <a href="{{post.slug}}">
+                    <h2 class="post-title">
+                        {{ post.title|upper }}
+                    </h2>
+                </a>
                 <div class="post-flex-container">
-
                     <div class="cover-preview">
                         <a href="{{post.slug}}">
                             <p><img src="{{post.cover}}" alt="Post Cover"></p>
@@ -43,11 +47,8 @@
 
                     <div class="post-preview">
                         <a href="{{post.slug}}">
-                            <h2 class="post-title">
-                                {{ post.title|lower|capfirst }}
-                            </h2>
                             <h3 class="post-subtitle">
-                                {{ post.content|truncatechars:100|convert_markdown|safe }}
+                                {{ post.content|truncatechars:89|convert_markdown|safe }}[leia mais]
                             </h3>
                         </a>
                     </div>

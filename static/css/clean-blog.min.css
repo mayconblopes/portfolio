@@ -88,6 +88,11 @@ p a {
     text-decoration: underline
 }
 
+/* set all images of the post content to max-width 100% */
+article img {
+    max-width: 100%;
+}
+
 a:focus,
 a:hover {
     color: #ff5f0c;
@@ -313,6 +318,7 @@ hr.small {
     display: flex;
     flex-direction: row;
     gap: 60px;
+    text-align: left;
 
 }
 
@@ -341,9 +347,10 @@ hr.small {
     .post-flex-container {
         flex-direction: column;
         align-items: center;
+        gap: 0;
     }
     
-    .post-flex-container img {
+    .post-flex-container * {
         max-width: 100%;
     }
 }

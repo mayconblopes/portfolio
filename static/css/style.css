@@ -946,6 +946,7 @@ a:focus {
     object-fit: cover;
     /* transform: scale(1.1); */
     transition: .5s;
+    cursor: pointer;
 }
 
 .portfolio .portfolio-item:hover img {
