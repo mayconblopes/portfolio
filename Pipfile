@@ -7,14 +7,11 @@ name = "pypi"
 django = "*"
 fontawesomefree = "*"
 python-decouple = "*"
-psycopg2 = "*"
 markdown = "*"
 gunicorn = "*"
 whitenoise = "*"
-django-on-heroku = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.10"
-
