@@ -49,11 +49,17 @@ class Competence(models.Model):
 
 
 class Experience(models.Model):
+    EXPERIENCE_TYPE_CHOICES = (
+        ('academic', 'academic'),
+        ('professional', 'professional'),
+    )
+
     name = models.CharField(max_length=50, verbose_name="Nome do Cargo ou do Título Acadêmico")
     where = models.CharField(max_length=250, verbose_name="Local")
-    when = models.CharField(max_length=50, verbose_name="Quando [Ano-Inicio - Ano-Fim]")
+    when = models.CharField(max_length=50, verbose_name="Quando [Mês/Ano-Inicio - Mês/Ano-Fim]")
     description = models.TextField(max_length=85, verbose_name="Descrição do Cargo ou do Título Acadêmico")
     index_order = models.IntegerField(verbose_name="Ordem de exibição", default=0)
+    type = models.CharField(max_length=12, verbose_name="Tipo", choices=EXPERIENCE_TYPE_CHOICES, default='academic')
 
     class Meta:
         verbose_name = 'Experiência'
