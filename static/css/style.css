@@ -602,6 +602,21 @@ a:focus {
 /*******************************/
 /******* Experience CSS ********/
 /*******************************/
+
+.experience-filters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-check-input {
+    accent-color: #9e2312;
+}
+
+.no-experiences {
+    text-align: center;
+    padding: 50px;
+}
+
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
@@ -960,7 +975,7 @@ a:focus {
     margin: -30px 15px 30px 15px;
     display: flex;
     align-items: center;
-    background: #ffffff;
+    background: #ffc107;
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
 }
 

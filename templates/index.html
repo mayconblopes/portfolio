@@ -128,7 +128,7 @@
             <div class="container">
                 <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>Skills</p>
-                    <h2>Competências Profissionais</h2>
+                    <h2>Competências e Talentos</h2>
                 </div>
 
                 <div class="row">
@@ -244,13 +244,73 @@
             <div class="container">
                 <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                     <p>Experiência</p>
-                    <h2>Trajetória Profissional e Acadêmica</h2>
+
+                    <!--render no experiences-->
+                    <div class="no-experiences hidden">
+                        Selecione pelo menos um tipo de experiência para conhecer minha trajetória
+                    </div>
+
+                    <section class="experience-filters">
+                        <div>
+                            <input class="form-check-input" type="checkbox" checked id="professional-check">
+                            <label for="professional-check" class="form-check-label">
+                                    Profissional
+                                </label>
+                            </input>
+                        </div>
+
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="academic-check">
+                            <label for="academic-check" class="form-check-label">
+                                    Acadêmica
+                                </label>
+                            </input>
+                        </div>
+                    </section>
+
                 </header>
 
-                <div class="timeline">
+                <!--render only professional experiences)-->
+                <div class="timeline professional-experiences">
+                    {% for experience in experiences %}
+                        {% if experience.type == 'professional' %}
+                            <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
+                                <div class="timeline-text">
+                                    <div class="timeline-date">{{experience.when}}</div>
+                                    <h2>{{experience.name}}</h2>
+                                    <h4>{{experience.where}}</h4>
+                                    <p>
+                                        {{experience.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!--render only academic experiences)-->
+                <div class="timeline academic-experiences hidden">
+                    {% for experience in experiences %}
+                        {% if experience.type == 'academic' %}
+                            <div class="timeline-item {% cycle 'left' 'right' %}">
+                                <div class="timeline-text">
+                                    <div class="timeline-date">{{experience.when}}</div>
+                                    <h2>{{experience.name}}</h2>
+                                    <h4>{{experience.where}}</h4>
+                                    <p>
+                                        {{experience.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <!--render all experiences (academic and professional)-->
+                <div class="timeline all-experiences hidden">
                     {% for experience in experiences %}
                     <!--see cycle doc at https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#cycle-->
-                    <div class="timeline-item {% cycle 'left' 'right' %} wow {% cycle 'slideInLeft' 'slideInRight' %}" data-wow-delay="0.1s">
+                    <div class="timeline-item {% cycle 'left' 'right' %}">
                         <div class="timeline-text">
                             <div class="timeline-date">{{experience.when}}</div>
                             <h2>{{experience.name}}</h2>
@@ -262,9 +322,10 @@
                     </div>
                     {% endfor %}
                 </div>
+
             </div>
         </div>
-        <!-- Job Experience End -->
+        <!-- Experience End -->
 
         <!-- Banner Awards Start -->
         <div id="banner-awards" class="banner">
@@ -385,7 +446,7 @@
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="/">Porfolio de {{ iam.name }}</a>, Todos os Direitos Reservados | Designed By <a href="https://github.com/mayconblopes">mayconblopes</a></p>
+                    <p>&copy; <a href="/">Porfolio de {{ iam.name }}</a>, Todos os Direitos Reservados | Designed/Developer by <a href="https://github.com/mayconblopes">mayconblopes</a></p>
                 </div>
             </div>
         </div>
@@ -418,6 +479,7 @@
         <script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/detail_about.js' %}"></script>
         <script src="{% static 'js/detail_banner.js' %}"></script>
+        <script src="{% static 'js/experience-filters.js' %}"></script>
     </body>
 
 </html>
