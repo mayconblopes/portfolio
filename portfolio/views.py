@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import FileResponse
+from django.shortcuts import render, redirect
 
 from blog.views import BlogPubPostListView
 from portfolio.models import About, Iam, Competence, Experience, Award, Papper, PortfolioItem
@@ -41,3 +42,7 @@ def index(request):
     }
 
     return render(request, 'index.html', context)
+
+
+def bkp(request):
+    return FileResponse(open('data/portfolio.sqlite3', 'rb')) if request.user.is_superuser else redirect('/')
