@@ -612,6 +612,13 @@ a:focus {
     accent-color: #9e2312;
 }
 
+.form-check-label {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .no-experiences {
     text-align: center;
     padding: 50px;
